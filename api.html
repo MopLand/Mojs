@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="wrapper">
+    
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browser.html">Browser</a></li>
+                <li><a href="selector.html">Selector</a></li>
+                <!--li><a href="ajax.html">Ajax</a></li-->
+                <!--li><a href="drag.html">Drag</a></li-->
+                <li><a href="event.html">Event</a></li>
+                <li><a href="date.html">Date</a></li>
+                <li><a href="string.html">String</a></li>
+                <!--li><a href="number.html">Number</a></li-->
+                <li><a href="array.html">Array</a></li>
+                <li><a href="cookie.html">Cookie</a></li>
+                <li><a href="validate.html">Validate</a></li>
+                <!--li><a href="hash.html">Hash</a></li-->
+                <li><a href="method.html">Method</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="api.html">API</a></li>
+            </ul>
+        </div>
+
+
+        <dl id="entry">
+
+            <dt> Mo.API </dt>
+            <dd>
+
+                <p>
+                    Mo.js 内部扩展函数，包括 UI 、交互 以及其他。
+                </p>
+                
+                <p>
+                    使用动态方式加载 API 请参考：<a href="method.html#Mo.script()">Mo.script()</a>
+                </p>
+                
+                <p><em><strong>注意：</strong>直接引用以下脚本时，不同编码下需要 charset 来申明编码，否则可能会出现中文乱码的问题。 </em></p>
+                
+                <table border="0"cellpadding="0" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td width="20%">文件</td>
+                        <td width="30%">API</td>
+                        <td width="50%">描述</td>
+                      </tr>
+                    </thead>
+                    <tr>
+                        <td class="item"> <a href="api/ajax.html">mo.ajax.js</a> </td>
+                        <td> <a href="api/ajax.html?#Mo.Ajax()">Mo.Ajax()</a> </td>
+                        <td>Ajax 组件</td>
+                    </tr>
+                    <tr>
+                        <td class="item"> <a href="api/drag.html">mo.drag.js</a> </td>
+                        <td> <a href="api/drag.html?#Mo.Drag()">Mo.Drag()</a> </td>
+                        <td>Drag 组件</td>
+                    </tr>
+                    <tr>
+                        <td class="item"> <a href="api/xml.html">mo.xml.js</a> </td>
+                        <td> <a href="api/xml.html?#Mo.XML()">Mo.XML()</a> </td>
+                        <td>XML 组件</td>
+                    </tr>
+                    <tr>
+                        <td class="item"> <a href="api/ui.html">mo.ui.js</a> </td>
+                        <td> <a href="api/ui.html?#Mo.Dialog()">Mo.Dialog()</a> </td>
+                        <td>对话框组件</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/ui.html?#Mo.Message()">Mo.Message()</a> </td>
+                        <td>页面消息组件</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/ui.html?#Mo.Tips()">Mo.Tips()</a> </td>
+                        <td>小纸条/小提示</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/ui.html?#Mo.FadeBox()">Mo.FadeBox()</a> </td>
+                        <td>淡入淡出幻灯片</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/ui.html?#Mo.TabMenu()">Mo.TabMenu()</a> </td>
+                        <td>项卡/滑动门</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/ui.html?#Mo.Soler()">Mo.Soler()</a> </td>
+                        <td>标签选择器</td>
+                    </tr>
+                    <tr>
+                        <td class="item"> <a href="api/effect.html">mo.effect.js</a> </td>
+                        <td> <a href="api/effect.html?#Mo.Grade()">Mo.Grade()</a> </td>
+                        <td>星级评分组件</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/effect.html?#Mo.DateDiff()">Mo.DateDiff()</a> </td>
+                        <td>倒计时函数</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/effect.html?#Mo.Process()">Mo.Process()</a> </td>
+                        <td>进度条</td>
+                    </tr>                    
+                    <tr>
+                        <td class="item"> <a href="api/form.html">mo.form.js</a> </td>
+                        <td> <a href="api/form.html?#Mo.Form()">Mo.Form()</a> </td>
+                        <td>表单验证工具</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/form.html?#Mo.Config()">Mo.Config()</a> </td>
+                        <td>表单项配置工具</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/form.html?#Mo.Serialize()">Mo.Serialize()</a> </td>
+                        <td>表单序列化工具</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/form.html?#Mo.Password()">Mo.Password()</a> </td>
+                        <td>密码强度测试</td>
+                    </tr>
+                    <tr>
+                        <td class="item"> <a href="api/hash.html">mo.hash.js</a> </td>
+                        <td> <a href="api/hash.html?#Mo.base64()">Mo.base64()</a> </td>
+                        <td>将字符串 base64 编码/解码</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/hash.html?#Mo.sha1()">Mo.sha1()</a> </td>
+                        <td>字符串 sha1 加密</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/hash.html?#Mo.md5()">Mo.md5()</a> </td>
+                        <td>字符串 MD5 加密</td>
+                    </tr>
+                    <tr>
+                        <td class="item"> <a href="api/interface.html">mo.interface.js</a> </td>
+                        <td> <a href="api/interface.html?#Mo.Command()">Mo.Command()</a> </td>
+                        <td>浏览器交互命令</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/interface.html?#Mo.Clipboard()">Mo.Clipboard()</a> </td>
+                        <td>复制到剪贴板</td>
+                    </tr>                    
+                    <tr>
+                        <td class="item"> <a href="api/color.html">mo.color.js</a> </td>
+                        <td> <a href="api/color.html?#Mo.Color()">Mo.Color()</a> </td>
+                        <td>常用颜色选择器</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/color.html?#Mo.Color.RGB()">Mo.Color.RGB()</a> </td>
+                        <td>将 16 进制颜色值转为 RGB 颜色值</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/color.html?#Mo.Color.HEX()">Mo.Color.HEX()</a> </td>
+                        <td>将 RGB 颜色值转为 16 进制颜色值</td>
+                    </tr>                    
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td> <a href="api/color.html?#Mo.Color.rand()">Mo.Color.rand()</a> </td>
+                        <td>产生一个随机颜色值</td>
+                    </tr>                    
+                    <tr>
+                        <td class="item"> <a href="api/china.html">mo.china.js</a> </td>
+                        <td> <a href="api/china.html?#Mo.China()">Mo.China()</a> </td>
+                        <td>地区组件</td>
+                    </tr>
+                </table>
+
+            </dd>
+
+        </dl>
+
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="packer.html">Packer</a> <span>|</span> <a href="regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

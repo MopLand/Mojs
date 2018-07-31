@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+    <title> test </title>    
+	<script src="src/mo.js" type="text/javascript" charset="utf-8"></script>
+</head> 
+<body> 
+    <div> 
+        <!--select id="s1" multiple="multiple"> 
+            <option value="1">1 </option> 
+            <option value="2">2 </option> 
+            <option value="3">3 </option> 
+        </select--> 
+        
+					A <input name="radio" type="radio" value="A" />
+					B <input name="radio" type="radio" value="B" />
+					C <input name="radio2" type="radio" value="C" />
+					D <input name="radio" type="radio" value="D" />
+        
+    </div>
+	
+	<script language="javascript" type="text/javascript"> 
+
+	/*
+	var o = Mo.find("input[name=radio]");
+	//var o = Mo.find("div input[name=radio]");
+
+	for( var i = 0; i<o.length; i++ ){
+		Mo.write( i + " : " + o[i].value, '<br />' );
+	}
+	*/
+	
+	</script>
+	
+	<hr />
+	
+	<label>
+	<input type="radio" class="radio" name="config[USER-XXXX]" value="中文" onclick_="doChangeMode();"> 
+	匿名用户
+	</label>
+	<label>
+	<input type="radio" class="radio" name="config[USER-XXXX]" value="ENG" onclick_="doChangeMode();">
+	注册用户
+	</label>
+
+	<br />	
+
+	<script language="javascript" type="text/javascript"> 
+
+	/*
+	var o = Mo.find("input[name='config[USER-XXXX]']");
+
+	for( var i = 0; i<o.length; i++ ){
+		Mo.write( i + " : " + o[i].value, '<br />' );
+	}
+	
+	
+	Mo("input[name='config[USER-XXXX]']").value( '中文' );
+	*/
+
+	</script>
+	
+	<br />	
+	
+	<label>
+	<input type="radio" class="radio" name="status" value="1"> 
+	开放表单
+	</label>
+	<label>
+	<input type="radio" class="radio" name="status" value="0">
+	关闭表单
+	</label>
+	
+	<hr />
+	
+	<script type='text/javascript'>
+			
+		Mo("input[name=status]").value( "1" );
+		
+	</script>
+
+	
+</body> 
+</html> 

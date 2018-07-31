@@ -1,0 +1,159 @@
+html,body{
+	 margin:0 auto;  padding:0 auto;
+}
+
+body{
+	font-size: 14px; font-family:Helvetica;  font-family:"Microsoft YaHei"; background:#FBFBFB url(pic/header.gif) repeat-x;
+}
+	
+/*
+	主体
+*/
+
+#wrapper{ width:880px; margin:0 auto; }
+
+	/*
+		页头
+	*/
+	#mo-js{ color:#fff; font-size:30px; line-height:50px; margin:0; float:left; margin-right:20px; }
+		#mo-js span{ color:#ccc; }
+
+	/*
+		说明
+	*/
+	#build{ color:#ccc; font-size:12px; margin:.5em 2em; line-height:50px; float:left; font-weight:normal; }
+	
+	/*
+		搜索
+	*/
+	#search{ line-height:50px; font-weight:normal; float:right; }
+		#search input{ color:#ccc; width:200px; border:#000 solid 1px; margin:12px 0; vertical-align:middle; padding:4px; font-size:13px; background:#444; }	
+		#search input:hover{ border-color:#79a6ad; }
+
+	/*
+		导航
+	*/
+	#naver{ margin:10px 0; font-weight:bold; clear:both; }
+
+		#naver ul{ margin:0; padding:0; overflow:hidden; background:#efefef; padding:5px; zoom:1; border-radius: 5px; }
+		#naver ul li{ display:inline-block; font-size:14px; line-height:30px; overflow:hidden; float:left; margin:0 2px;  }
+		#naver ul li a{ width:100%; padding:5px 8px; color:#000; text-decoration:none; overflow:hidden; border-radius: 5px; }
+		#naver ul li a:hover{ background:#999; color:#fff; }
+		#naver ul li a.active{ background:#FF9900; color:#fff; }
+		
+	/*
+		位置
+	*/
+	#locate{ line-height:20px; margin:10px 0; color:blue;}
+	
+	/*
+		索引
+	*/
+	#index{ overflow:hidden; background:#fff; border-radius: 5px; }
+		#index dt{ padding:5px; background:#79a6ad; color:#fff; text-indent:.5em; font-weight:bold; border-radius: 5px 5px 0 0;}
+		#index dd{ padding:0; margin:0;  border:#ccc solid 1px; border-radius: 0 0 5px 5px;}		
+			#index ul{ padding:10px 10px 10px 30px; margin:0; overflow:hidden; }
+			#index li{ width:33.3333%; float:left; line-height:25px; }
+			#index li a{  text-decoration:none; }
+			#index li a:hover{ color:#333; }
+		
+	/*
+		内容区
+	*/
+	#entry,#entry dt,#entry dd{ margin:0; padding:0; line-height:20px; overflow:hidden; zoom:1; }
+
+		#entry dt{ padding:5px; background:#666; color:#fff; text-indent:.5em; font-weight:bold; border-radius: 5px 5px 0 0; }		
+	
+		/*
+			更多示例
+		*/
+		#entry dt.more{ background:#80CC2D; background:#06C; }
+		#entry dd{ padding:5px; border:#ccc solid 1px; padding:10px; margin-bottom:10px; clear:both; background:#fff; color:#000; border-radius: 0 0 5px 5px; }		
+			#entry dd img , #entry dd button , #entry dd input{ vertical-align:middle;}		
+			#entry dd input{ padding:5px; border:1px solid #ccc; border-color:#666 #ccc #ccc #666; }		
+			#entry dd input.radio,#entry dd input.checkbox{ border:none; }
+	
+		/*
+			表格
+		*/
+		#entry dd table{ width:100%; background:#8EC1DA; margin:5px 0;}
+		
+		#entry dd table td{ background:#fff; padding:10px;}
+		
+		#entry dd table td.item{ background:#efefef; }
+		
+		#entry dd table thead td{ background:#8EC1DA; color:#000; padding:5px;}
+		
+		/*
+			进度条
+		*/
+		#entry dd table td .count{ float:right;}
+		#entry dd table td .ratio{height:15px; display:block; float:left; background:#ccc url(pic/ratio.png) repeat; width:100%;}
+		#entry dd table td .ratio span{ display:inline-block; height:15px;}
+	
+		/*
+			注释
+		*/
+		#entry blockquote{ background:#FFFF99; padding:0 10px; margin:0; overflow:hidden; }
+			#entry blockquote strong{ width:100px; display:inline-block;}
+			/*#entry blockquote p{ margin:10px 0;}*/
+		
+		/*
+			代码
+		*/
+		#entry pre{ line-height:16px; color:blue; background:#eee; padding:10px; font-family:Verdana; word-wrap: break-word; }
+			#entry pre em{ color:red; }
+		
+		/*
+			提示文字
+		*/
+		#entry em{ color:#999; }
+		
+		/*
+			文本框
+		*/
+       #entry textarea { border:#666 1px solid; padding:5px; background:#efefef; font-size:12px; }
+
+	
+	/*
+		自述
+	*/
+
+	#desc{ padding:20px 50px 20px 180px; margin:10px 0; line-height:30px; background:#fff url(pic/tree.gif) 30px 20px no-repeat; overflow:hidden; zoom:1; border-radius: 5px; }
+	
+		#desc p{ margin:20px 0; padding:0; overflow:hidden; zoom:1; }
+	
+		#desc p.text{ float:left; width:400px;	}	
+	
+			#desc p.text strong{ color:red; }
+		
+		#desc p.down{ float:left; width:200px; margin-left:20px; border-left:#ccc dashed 1px; padding-left:20px; }	
+		
+			#desc p.down strong{ font-size:22px; font-weight:normal; margin:0 15px; }	
+			#desc p.down a{ font-size:12px;	}
+	
+		#desc a img{ border:none; vertical-align:middle; }
+	
+		#desc button{ float:right; background:url(pic/download.jpg) no-repeat; width:145px; height:40px; color:#fff; font-size:25px; font-weight:bold; text-align:center; border:none; }
+	
+	/*
+		开发者
+	*/
+	#developer{ list-style:none; margin:0; padding:10px; overflow:hidden;}
+		#developer li{ text-align:center; width:60px; height:60px; float:left; padding:5px; margin:0 5px;}
+		#developer li a{ text-decoration:none;}
+		#developer li a img{ border:#0066CC solid 1px;}
+
+/*
+	返回顶部
+*/
+#top{ background:url(pic/top.gif) repeat-x; /*position:absolute;*/ visibility: hidden; position: fixed;  bottom:48px; right:50px; height:14px; width:54px; overflow:hidden; cursor: pointer;}
+
+/*
+	页尾
+*/
+#footer{ background:url(pic/footer.gif) repeat-x; padding:15px; height:20px; margin-top:50px; text-align:center; overflow:hidden;}
+	#footer span{ color:#999; /*margin:0 2px; display:inline-block; display:none; width:10px;*/ overflow:hidden; vertical-align:middle;}
+	#footer a{ margin:0 5px; display:inline-block;}
+	
+	

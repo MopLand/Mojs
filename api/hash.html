@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="../lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="../lib/mo.hash.js" type="text/javascript" charset="utf-8"></script>
+<script src="../res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="../res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="../search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../browser.html">Browser</a></li>
+                <li><a href="../selector.html">Selector</a></li>
+                <!--li><a href="../ajax.html">Ajax</a></li-->
+                <!--li><a href="../drag.html">Drag</a></li-->
+                <li><a href="../event.html">Event</a></li>
+                <li><a href="../date.html">Date</a></li>
+                <li><a href="../string.html">String</a></li>
+                <!--li><a href="../number.html">Number</a></li-->
+                <li><a href="../array.html">Array</a></li>
+                <li><a href="../cookie.html">Cookie</a></li>
+                <li><a href="../validate.html">Validate</a></li>
+                <!--li><a href="../hash.html">Hash</a></li-->
+                <li><a href="../method.html">Method</a></li>
+                <li><a href="../api.html">API</a></li>
+            </ul>
+        </div>
+
+        <div id="locate">
+            Mo &gt; API &gt; Hash
+        </div>
+        
+        <dl id="entry">
+
+            <dt> Mo.md5(string) </dt>
+            <dd>				
+                <p>将字符串进行 Md5 加密并返回</p>
+
+				<blockquote>
+                    <p> <strong>string</strong> 被加密的字符串 </p>
+                </blockquote>
+
+				<p>Md5加密字符串"abc"</p>
+
+                <pre>Mo.md5("abc");</pre>
+
+                <table border="0"cellpadding="0" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td width="50%">原始：</td>
+                        <td>结果：</td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <textarea id="md5_source" rows="4" style="width:96%;">abc</textarea>
+                        </td>
+                        <td>
+                            <textarea id="md5_result" rows="4" style="width:96%;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">                        					
+                            <button type="button" id="md5_encrypt">执行</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </dd>
+
+            <dt> Mo.sha1(string) </dt>
+            <dd>				
+                <p>将字符串进行 Sha1 加密并返回</p>
+
+				<blockquote>
+                    <p> <strong>string</strong> 被加密的字符串 </p>
+                </blockquote>
+				
+				<p> Sha1加密字符串"abc"</p>
+
+                <pre>Mo.sha1("abc");</pre>
+
+                <table border="0"cellpadding="0" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td width="50%">原始：</td>
+                        <td>结果：</td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <textarea id="sha_source" rows="4" style="width:96%;">abc</textarea>
+                        </td>
+                        <td>
+                            <textarea id="sha_result" rows="4" style="width:96%;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">                        					
+                            <button type="button" id="sha_encrypt">执行</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </dd>
+
+            <dt> Mo.base64(string) </dt>
+            <dd>
+
+                <p>将字符串进行 base64 编码和解码</p>
+
+				<blockquote>
+                    <p> <strong>string</strong> 被编码或解码的字符串 </p>
+                </blockquote>
+
+				<p>将字符串"abc"进行 base64 编码</p>
+                <pre>Mo.base64("abc").encode();</pre>
+
+                <table border="0"cellpadding="0" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td width="50%">原始：</td>
+                        <td>结果：</td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <textarea id="encode_source" rows="4" style="width:96%;">www.veryide.com</textarea>
+                        </td>
+                        <td>
+                            <textarea id="encode_result" rows="4" style="width:96%;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">                        					
+                            <button type="button" id="encode_encrypt">执行</button>
+                        </td>
+                    </tr>
+                </table>
+
+				<p>将字符串"YWJj"进行 base64 编码</p>
+                <pre>Mo.base64("YWJj").decode();</pre>
+
+                <table border="0"cellpadding="0" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td width="50%">原始：</td>
+                        <td>结果：</td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <textarea id="decode_source" rows="4" style="width:96%;">d3d3LnZlcnlpZGUuY29t</textarea>
+                        </td>
+                        <td>
+                            <textarea id="decode_result" rows="4" style="width:96%;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="button" id="decode_encrypt">执行</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </dd>
+
+        </dl>
+
+
+        <script type="text/javascript">		
+
+        /************* Md5 测试 ****************/
+
+        Mo("#md5_encrypt").bind('click',function(){
+
+            Mo("#md5_result").value( Mo.md5( Mo("#md5_source").value() ) );		
+
+        });
+
+        /************* 加解密 测试 ****************/
+
+        Mo("#sha_encrypt").bind('click',function(){
+
+            Mo("#sha_result").html( Mo.sha1( Mo("#sha_source").value() ) );		
+
+        });
+
+        /************* Base64 测试 ****************/
+
+        Mo("#encode_encrypt").bind('click',function(){
+
+            Mo("#encode_result").value( Mo.base64( Mo("#encode_source").value() ).encode() );		
+
+        });
+
+        Mo("#decode_encrypt").bind('click',function(){
+
+            Mo("#decode_result").value( Mo.base64( Mo("#decode_source").value() ).decode() );		
+
+        });
+
+        </script>
+
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="../packer.html">Packer</a> <span>|</span> <a href="../regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

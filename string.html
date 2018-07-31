@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browser.html">Browser</a></li>
+                <li><a href="selector.html">Selector</a></li>
+                <!--li><a href="ajax.html">Ajax</a></li-->
+                <!--li><a href="drag.html">Drag</a></li-->
+                <li><a href="event.html">Event</a></li>
+                <li><a href="date.html">Date</a></li>
+                <li><a href="string.html">String</a></li>
+                <!--li><a href="number.html">Number</a></li-->
+                <li><a href="array.html">Array</a></li>
+                <li><a href="cookie.html">Cookie</a></li>
+                <li><a href="validate.html">Validate</a></li>
+                <!--li><a href="hash.html">Hash</a></li-->
+                <li><a href="method.html">Method</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="api.html">API</a></li>
+            </ul>
+        </div>
+
+        <dl id="entry">
+
+            <dt> Mo.String( string ) </dt>
+            <dd>
+                <p>执行字符串处理操作。</p>
+
+                <blockquote>
+                    <p> <strong>string</strong>  执行字符串处理操作的字符串</p>
+                </blockquote>
+            
+            </dd>
+
+            <dt> .output() </dt>
+            <dd>
+
+                <p>返回字符串自身。</p>
+
+                <pre>Mo.String(" example ").output();</pre>
+
+                <p><script>Mo.write( Mo.String(" example ").output() );</script></p>
+
+            </dd>
+
+            <dt> .pad( length, string, type ) </dt>
+            <dd>
+
+                <p>将字符串使用字符填充至指定长度。</p>
+                
+                <blockquote>
+                    <p> <strong>length</strong>  目标长度</p>
+                    <p> <strong>string</strong>  填充内容</p>
+                    <p> <strong>type</strong>  填充方式，0：从左开始，1：从右 开始，2：两边同时</p>
+                </blockquote>
+
+                <pre>Mo.String("Mo.js").pad( 10, "~", 2 );</pre>
+
+                <p><script>Mo.write( Mo.String("Mo.js").pad( 10, "~", 2 ) ); </script></p>
+
+            </dd>
+            
+            <dt> .trim() </dt>
+            <dd>
+
+                <p>将字符串两边的空白字符去除。</p>
+
+                <pre>Mo.String(" ex ").trim().output() + Mo.String(" ample ").trim().output();</pre>
+
+                <p><script>Mo.write( Mo.String(" ex ").trim().output() + Mo.String(" ample ").trim().output() );</script></p>
+
+            </dd>
+
+            <dt> .length() </dt>
+            <dd>
+
+                <p>返回字符串字节长度。</p>
+
+                <pre>Mo.String(" example ").length();</pre>
+
+                <p><script>Mo.write( Mo.String(" example ").length() );</script></p>
+
+            </dd>
+
+            <dt> .format() </dt>
+            <dd>
+
+                <p>返回格式化后的字符串。</p>
+
+                <pre>Mo.String("今天是{0}年{1}月{2}日").format( Mo.date("y"), Mo.date("m"), Mo.date("d") );</pre>
+
+                <p><script>Mo.write( Mo.String("今天是{0}年{1}月{2}日").format( Mo.date("y"), Mo.date("m"), Mo.date("d") ).output() );</script></p>
+
+            </dd>
+
+            <dt> .leftTrim() </dt>
+            <dd>
+
+                <p>将字符串左边的空白字符去除。</p>
+
+                <pre>Mo.String(" example ").leftTrim();</pre>
+
+                <p><script>Mo.write( Mo.String(" example ").leftTrim().output() );</script></p>
+
+            </dd>
+
+            <dt> .rightTrim() </dt>
+            <dd>
+
+                <p>将字符串右边的空白字符去除。</p>
+
+                <pre>Mo.String(" example ").rightTrim();</pre>
+
+                <p><script>Mo.write( Mo.String(" example ").rightTrim().output() );</script></p>
+
+            </dd>
+
+            <dt> .stripScript() </dt>
+            <dd>
+
+                <p>将字符串中 Script 标签过滤。</p>
+
+                <pre>Mo.String(" example ").stripScript();</pre>
+
+                <p><script>Mo.write( Mo.String(" example ").stripScript().output() );</script></p>
+
+            </dd>
+
+            <dt> .stripTags( [allowed] ) </dt>
+            <dd>
+
+                <p>将字符串中 HTML 标签过滤。</p>
+
+                <pre>Mo.String( ' example ' ).stripTags();</pre>
+
+                <pre>Mo.String( '&lt;p&gt;Kevin&lt;/p&gt; &lt;br /&gt;&lt;b&gt;van&lt;/b&gt; &lt;i&gt;Zonneveld&lt;/i&gt;' ).stripTags( '&lt;i&gt;&lt;b&gt;' );</pre>
+
+                <p><script>Mo.write( Mo.String(" example ").stripTags().output() );</script></p>
+
+            </dd>
+
+            <dt> .encodeHTML() </dt>
+            <dd>
+
+                <p>将字符串中 HTML 标签进行编码。</p>
+
+                <pre>Mo.String(" example ").encodeHTML();</pre>
+
+                <p><script>Mo.write( Mo.String('<string> example </strong>').encodeHTML() );</script></p>
+
+            </dd>
+            
+            <dt> .decodeHTML() </dt>
+            <dd>
+
+                <p>将已编码的 HTML 标签进行解码。</p>
+
+                <pre>Mo.String(" example ").decodeHTML();</pre>
+
+                <p><script>Mo.write( Mo.String(" 中文 example ").decodeHTML() );</script></p>
+
+            </dd>
+            
+            <dt> .escapeSymbol() </dt>
+            <dd>
+
+                <p>编码特殊符号。</p>
+
+                <pre>Mo.String(" %&+/#=").escapeSymbol();</pre>
+
+                <p><script>Mo.write( Mo.String(" %&+/#=").escapeSymbol() );</script></p>
+
+            </dd>
+            
+            <dt> .toCamelCase() </dt>
+            <dd>
+
+                <p>将 CSS 样式属性名转为 JS 形式。</p>
+
+                <pre>Mo.String("z-index").toCamelCase();</pre>
+
+                <p><script>Mo.write( Mo.String("z-index").toCamelCase() );</script></p>
+
+            </dd>
+
+            <dt> .unicode() </dt>
+            <dd>
+
+                <p>将 ASCII 字符串转换为 Unicode。</p>
+
+                <pre>Mo.String(" example ").unicode();</pre>
+
+                <table border="0"cellpadding="0" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td width="50%">原始：</td>
+                        <td>结果：</td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <textarea id="a2u_source" rows="4" style="width:96%;">abc</textarea>
+                        </td>
+                        <td>
+                            <textarea id="a2u_result" rows="4" style="width:96%;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">                        					
+                            <button type="button" id="a2u_encrypt">执行</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </dd>
+
+            <dt> .ascii() </dt>
+            <dd>
+
+                <p>将 Unicode 字符串转换为 ASCII。</p>
+
+                <pre>Mo.String(" example ").ascii();</pre>
+
+                <table border="0"cellpadding="0" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td width="50%">原始：</td>
+                        <td>结果：</td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <textarea id="u2a_source" rows="4" style="width:96%;">&amp;#97;&amp;#98;&amp;#99;</textarea>
+                        </td>
+                        <td>
+                            <textarea id="u2a_result" rows="4" style="width:96%;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">                        					
+                            <button type="button" id="u2a_encrypt">执行</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </dd>
+            
+            <dt> .eval() </dt>
+            <dd>
+
+                <p>将字符串进行计算。</p>
+
+                <pre>Mo.String("var obj = '123';").eval();</pre>
+
+            </dd>
+
+        </dl>
+
+        <script type="text/javascript">
+
+
+        /************* Base64 测试 ****************/
+
+        Mo("#a2u_encrypt").bind('click',function(){
+
+            Mo("#a2u_result").value( Mo.String( Mo("#a2u_source").value() ).unicode().output() );		
+
+        });
+
+        Mo("#u2a_encrypt").bind('click',function(){
+
+            Mo("#u2a_result").value( Mo.String( Mo("#u2a_source").value() ).ascii().output() );		
+
+        });
+
+        </script>
+
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="packer.html">Packer</a> <span>|</span> <a href="regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

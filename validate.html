@@ -1,0 +1,427 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browser.html">Browser</a></li>
+                <li><a href="selector.html">Selector</a></li>
+                <!--li><a href="ajax.html">Ajax</a></li-->
+                <!--li><a href="drag.html">Drag</a></li-->
+                <li><a href="event.html">Event</a></li>
+                <li><a href="date.html">Date</a></li>
+                <li><a href="string.html">String</a></li>
+                <!--li><a href="number.html">Number</a></li-->
+                <li><a href="array.html">Array</a></li>
+                <li><a href="cookie.html">Cookie</a></li>
+                <li><a href="validate.html">Validate</a></li>
+                <!--li><a href="hash.html">Hash</a></li-->
+                <li><a href="method.html">Method</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="api.html">API</a></li>
+            </ul>
+        </div>
+
+
+        <dl id="entry">
+
+            <dt> Mo.Validate </dt>
+            <dd>
+                <p> 对象验证方法。 </p>
+            </dd>
+
+            <dt> Mo.Validate.Array( object ) </dt>
+            <dd>
+
+                <p>验证对象是否为数组。</p>
+
+                <blockquote>
+                    <p> <strong>object</strong> 需要验证的对象</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Array( [1,2,3] ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Array( [1,2,3] ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Function( object ) </dt>
+            <dd>
+
+                <p>验证对象是否为函数。</p>
+
+                <blockquote>
+                    <p> <strong>object</strong> 需要验证的对象</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Function( function(){} ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Function( function(){} ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Object( object ) </dt>
+            <dd>		
+
+                <p>验证对象是否为对象。</p>
+
+                <blockquote>
+                    <p> <strong>object</strong> 需要验证的对象</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Object( alert ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Object( alert ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Date( object ) </dt>
+            <dd>
+
+                <p>验证对象是否为日期。</p>
+
+				<blockquote>
+                    <p> <strong>object</strong> 需要验证的对象或字符串</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Date( new Date() ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Date( new Date() ) ); </script></p>
+
+                <pre> Mo.Validate.Date( '2012-12-22' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Date( '2012-12-22' ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Number( object ) </dt>
+            <dd>
+
+                <p>验证对象是否为数值。</p>
+
+                <blockquote>
+                    <p> <strong>object</strong> 需要验证的对象</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Number( 9 ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Number( 9 ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.String( object ) </dt>
+            <dd>
+
+                <p>验证对象是否为字符串。</p>
+
+                <blockquote>
+                    <p> <strong>object</strong> 需要验证的对象</p>
+                </blockquote>
+
+                <pre> Mo.Validate.String( 'Mo' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.String( 'Mo' ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Defined( object ) </dt>
+            <dd>
+
+                <p>验证对象是否已定义。</p>
+
+                <blockquote>
+                    <p> <strong>object</strong>  需要验证的对象</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Defined( Mo ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Defined( Mo ) ); </script></p>
+
+            </dd>
+            
+            <dt> Mo.Validate.Empty( object ) </dt>
+            <dd>
+
+                <p>验证对象是否为空。</p>
+
+                <blockquote>
+                    <p> <strong>object</strong>  需要验证的对象</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Empty( '' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Empty( '' ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Boolean( object ) </dt>
+            <dd>
+
+                <p>验证对象是否为布尔值。</p>
+
+                <blockquote>
+                    <p> <strong>object</strong>  需要验证的对象</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Boolean( false ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Boolean( false ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Window( object ) </dt>
+            <dd>
+
+                <p>验证对象是否为 window 。</p>
+
+                <blockquote>
+                    <p> <strong>object</strong>  需要验证的对象</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Window( window ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Window( window ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Document( object ) </dt>
+            <dd>
+
+                <p>验证对象是否为 document 。</p>
+
+                <blockquote>
+                    <p> <strong>object</strong>  需要验证的对象</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Document( document ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Document( document ) ); </script></p>
+
+            </dd>
+            
+            <dt> Mo.Validate.Element( object ) </dt>
+            <dd>
+
+                <p>验证对象是否为元素。</p>
+
+                <blockquote>
+                    <p> <strong>object</strong>  需要验证的对象</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Element( document.body ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Element( document.body ) ); </script></p>
+
+            </dd>
+
+            <!--dt> Mo.Validate.XML() </dt>
+            <dd>
+
+                <p>验证对象是否为 XML 对象。</p>
+
+                <pre> Mo.Validate.XML( [] ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.XML( [] ) ); </script></p>
+
+            </dd-->
+
+            <dt> Mo.Validate.Chinese( string[, all] ) </dt>
+            <dd>
+
+                <p>验证字符串是否包含中文。</p>
+
+                <blockquote>
+                    <p> <strong>string</strong>  需要验证的字符串</p>
+                    <p> <strong>all</strong>  可选，ture 或 false，是否全部为中文</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Chinese( '我是中文' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Chinese( '我是中文' ) ); </script></p>
+                
+                <p>验证字符串是否全部由中文构成。</p>
+                
+                <pre> Mo.Validate.Chinese( '我是中文和 e 文' , true ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Chinese( '我是中文和 e 文' , true ) ); </script></p>
+
+            </dd>
+            
+            <dt> Mo.Validate.Safe( string ) </dt>
+            <dd>
+
+                <p>验证对象是否为安全字符，即是否有特殊字符。</p>
+
+                <blockquote>
+                    <p> <strong>string</strong>  需要验证的字符串</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Safe( '[]' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Safe( '[]' ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Email( string ) </dt>
+            <dd>
+
+                <p>验证对象是否为电子邮件地址。</p>
+
+                <blockquote>
+                    <p> <strong>string</strong>  需要验证的邮件地址</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Email( 'example@domain.com' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Email( 'example@domain.com' ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.URL( string ) </dt>
+            <dd>
+
+                <p>验证对象是否为 URL 资源。</p>
+
+                <blockquote>
+                    <p> <strong>string</strong>  需要验证的URL 资源</p>
+                </blockquote>
+
+                <pre> Mo.Validate.URL( 'http://example.domain.com' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.URL( 'http://example.domain.com' ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.IP( string ) </dt>
+            <dd>
+
+                <p>验证对象是否为 IP 地址。</p>
+
+                <blockquote>
+                    <p> <strong>string</strong>  需要验证的IP地址</p>
+                </blockquote>
+
+                <pre> Mo.Validate.IP( '127.0.0.1' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.IP( '127.0.0.1' ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.ID( string ) </dt>
+            <dd>
+
+                <p>验证字符串是否为身份证。</p>
+
+                <blockquote>
+                    <p> <strong>string</strong>  需要验证的身份证号码，支持15或18位</p>
+                </blockquote>
+
+                <pre> Mo.Validate.ID( '42112119801010X' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.ID( '42112119801010X' ) ); </script></p>
+
+                <pre> Mo.Validate.ID( '421121198010104283' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.ID( '421121198010104283' ) ); </script></p>
+
+            </dd>
+            
+            <dt> Mo.Validate.Password( string ) </dt>
+            <dd>
+
+                <p>验证对象是否为合法密码（6~20 位）。</p>
+
+                <blockquote>
+                    <p> <strong>string</strong>  需要验证的密码字符串</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Password( '123456' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Password( '123456' ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Color( string ) </dt>
+            <dd>
+
+                <p>验证对象是否为颜色。</p>
+
+                <blockquote>
+                    <p> <strong>string</strong>  需要验证的颜色字符串，16进制颜色</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Color( '#AABBCC' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Color( '#AABBCC' ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Phone( string ) </dt>
+            <dd>
+
+                <p>校验普通电话、传真号码：可以“+”开头，除数字外，可含有“-”。</p>
+
+                <blockquote>
+                    <p> <strong>string</strong>  需要验证的号码字符串</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Phone( '6666888' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Phone( '6666888' ) ); </script></p>
+                
+                <pre> Mo.Validate.Phone( '0519-6666888' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Phone( '0519-6666888' ) ); </script></p>
+
+            </dd>
+
+            <dt> Mo.Validate.Mobile( string ) </dt>
+            <dd>
+
+                <p>校验手机号码：必须以数字开头，除数字外，可含有“-”。</p>
+
+                <blockquote>
+                    <p> <strong>string</strong>  需要验证的手机号码字符串</p>
+                </blockquote>
+
+                <pre> Mo.Validate.Mobile( '15066661234' ); </pre>
+
+                <p> <script> Mo.write( Mo.Validate.Mobile( '15066661234' ) ); </script></p>
+
+            </dd>
+
+        </dl>			
+
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="packer.html">Packer</a> <span>|</span> <a href="regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

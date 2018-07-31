@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="../lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="../lib/mo.ui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="../res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+
+<link href="../res/ui.css" media="screen" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="../search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../browser.html">Browser</a></li>
+                <li><a href="../selector.html">Selector</a></li>
+                <!--li><a href="../ajax.html">Ajax</a></li-->
+                <!--li><a href="../drag.html">Drag</a></li-->
+                <li><a href="../event.html">Event</a></li>
+                <li><a href="../date.html">Date</a></li>
+                <li><a href="../string.html">String</a></li>
+                <!--li><a href="../number.html">Number</a></li-->
+                <li><a href="../array.html">Array</a></li>
+                <li><a href="../cookie.html">Cookie</a></li>
+                <li><a href="../validate.html">Validate</a></li>
+                <!--li><a href="../hash.html">Hash</a></li-->
+                <li><a href="../method.html">Method</a></li>
+                <li><a href="../api.html">API</a></li>
+            </ul>
+        </div>
+
+        <div id="locate">
+            Mo &gt; API &gt; UI
+        </div>
+
+        <dl id="entry">
+
+            <dt> Mo.Dialog( style, title, content, width, height, config ) </dt>
+            <dd>
+                <p>执行字符串处理操作。</p>
+                
+                <blockquote>
+                    <p> <strong>style</strong>  样式名称</p>
+                    <p> <strong>title</strong>  对话框标题</p>
+                    <p> <strong>content</strong>  主体内容</p>
+                    <p> <strong>width</strong>  宽度，支持百分比</p>
+                    <p> <strong>height</strong>  高宽，支持百分比</p>
+                    <p> <strong>config</strong>  选项配置</p>
+				</blockquote>
+
+                <p>config 可接受参数</p>
+
+                <blockquote>
+                    <p> <strong>locked</strong>  是否锁定窗口背景</p>
+                    <p> <strong>remove</strong>  是否显示关闭按钮</p>
+                    <p> <strong>draged</strong>  是否支持拖动窗口</p>
+                    <p> <strong>zindex</strong>  CSS z-index</p>
+                    <p> <strong>unique</strong>  唯一标识，设置此参数可以防止重复打开窗口</p>
+                    <p> <strong>minimize</strong>  是否显示最小化按钮</p>
+                    <p> <strong>maximize</strong>  是否显示最大化按钮</p>
+                    <p> <strong>create</strong>  是否立即创建对象</p>
+                    <p> <strong>opacity</strong>  拖动窗口时是否透明</p>
+                    <p> <strong>wrapper</strong>  窗口父容器（CSS选择器）</p>
+                </blockquote>
+
+                <p>自定义事件方法</p>
+
+                <blockquote>
+                    <p> <strong>onRemove</strong>  窗口关闭时回调，需要 return true;</p>
+                    <p> <strong>onMinimize</strong>  窗口最小化时回调，需要 return true;</p>
+                    <p> <strong>onMaximize</strong>  窗口最大化时回调，需要 return true;</p>
+                    <p> <strong>onCreate</strong>  窗口创建时回调</p>
+                    <p> <strong>onDblclick</strong>  标题栏双击时回调</p>
+                    <p> <strong>onDragStart</strong>  窗口开始移动时回调</p>
+                    <p> <strong>onDragEnd</strong>  窗口结束移动时回调</p>
+                </blockquote>
+                
+                <pre>Mo.Dialog( "mo-dialog", "OK", '&lt;img src="../res/images/ok.jpg" /&gt;', 390, 0, { "remove" : true, "draged" : true, "maximize" : true, "locked" : true } );</pre>
+                
+                <p><button type="button" id="btn_dialog">测试</button></p>
+                
+            </dd>
+
+            <dt> Mo.Soler( self, event, value, style, data[, func, fX, fY] ) </dt>
+            <dd>
+
+                <p>标签选择器。</p>
+                
+                <blockquote>
+                    <p> <strong>self</strong>  当前参考对象</p>
+                    <p> <strong>event</strong>  event 事件</p>
+                    <p> <strong>value</strong>  默认值</p>
+                    <p> <strong>style</strong>  样式名称</p>
+                    <p> <strong>data</strong>  数据源，JSON 形式</p>
+                    <p> <strong>func</strong>  回调函数</p>
+                    <p> <strong>fX</strong>  向左偏移多少，单位：像素</p>
+                    <p> <strong>fY</strong>  向上偏移多少，单位：像素</p>
+                </blockquote>
+
+                <p>func 可接受参数</p>
+
+                <blockquote>
+                    <p> <strong>value </strong>  当前选定值</p>
+                    <p> <strong>self</strong>  当前参考对象，可以使用 this 获取</p>
+                </blockquote>
+
+                <pre>Mo.Soler( this, event, this.value, "soler", json, function( value ){ this.value = value; } );</pre>
+
+                <p> <input type="text" id="soler" name="soler" value="" fix_name="消费金额" fix_number="yes" /> </p>
+
+                <p>
+                <script>
+                Mo("#soler").bind( "click", function( ele, index, event ){
+
+                        var json = {
+                                "title"  : [100,200,300,400,500],
+                                "title2" : [600,700,800,900,999]
+                        };
+
+                        Mo.Soler( this, event, this.value, "mo-soler", json, function( value ){ this.value = value; },0 ,12 );
+
+                }).attr( { "readonly" : "true" } );
+                </script>
+                </p>
+
+            </dd>
+
+            <dt> Mo.Message( style, html, time[, config, func ] ) </dt>
+            <dd>
+
+                <p>页面消息。</p>
+                
+                <blockquote>
+                    <p> <strong>style</strong>  样式名称</p>
+                    <p> <strong>html</strong>  HTML 代码</p>
+                    <p> <strong>time</strong>  显示时间，单位：秒</p>
+                    <p> <strong>config</strong>  选项配置</p>
+                    <p> <strong>func</strong>  回调函数</p>
+                </blockquote>
+
+                <p>config 可接受参数</p>
+
+                <blockquote>
+                    <p> <strong>unique</strong>  唯一ID，设置此参数可以使用选择器来访问</p>
+                    <p> <strong>center</strong>  是否居中于窗口</p>
+                </blockquote>
+                
+                <pre>Mo.Message( "message", '我是来自页面的消息', 3, {"center":true} );</pre>
+                
+                <p> <button type="button" id="btn_message" name="btn_message">测试</button> </p>
+
+                <p>
+                <script>
+                Mo("#btn_message").bind( "click", function( ele, index, event ){
+
+                        Mo.Message( "mo-message", '我是来自页面的消息', 3, {"center":true} );
+
+                });
+                </script>
+                </p>
+
+            </dd>
+            
+            <dt> Mo.Tips( self, event, style, html, action[, fX, fY, config] ) </dt>
+            <dd>
+
+                <p>工具提示。</p>
+                
+                <blockquote>
+                    <p> <strong>self</strong>  当前参考对象</p>
+                    <p> <strong>event</strong>  event 事件</p>
+                    <p> <strong>style</strong>  样式名称</p>
+                    <p> <strong>html</strong>  默认值</p>
+                    <p> <strong>action</strong>  关闭纸条的事件名称</p>
+                    <p> <strong>fX</strong>  向左偏移多少，单位：像素</p>
+                    <p> <strong>fY</strong>  向上偏移多少，单位：像素</p>
+                    <p> <strong>config</strong>  选项配置</p>
+                </blockquote>
+
+                <p>config 可接受参数</p>
+
+                <blockquote>
+                    <p> <strong>unique</strong>  唯一ID，设置此参数可以使用选择器来访问</p>
+                    <p> <strong>bubble</strong>  是否响应 click 冒泡事件，默认为 false</p>
+                </blockquote>
+
+                <pre>Mo.Tips( this , event, 'tips', '这里是提示信息', 'mouseover', 20, 0 );</pre>
+
+                <p> <div onmouseover="Mo.Tips( this , event, 'mo-tips', '这里是提示信息', 'mouseover', 20, 0 );" style="border:#666 solid 1px; width:20px; height:20px;"></div> </p>
+                
+                <p>点击显示工具提示。</p>
+
+                <pre>Mo.Tips( this , event, 'tips', '这里是提示信息', 'click', 20, 0 );</pre>
+
+                <p> <div onclick="Mo.Tips( this , event, 'mo-tips', '这里是提示信息', 'click', 0, 21 );" style="border:#666 solid 1px; width:20px; height:20px;"></div> </p>
+
+            </dd>
+            
+            <dt> Mo.TabMenu() </dt>
+            <dd>
+
+                <p>选项卡。</p>
+
+                <pre>Mo.TabMenu();</pre>
+
+                <div id="tabmenu">
+        
+                        <ol>
+                                <li id="m-1">卡片一</li>
+                                <li id="m-2">卡片二</li>
+                        </ol>
+        
+                        <div id="u-1">
+                                <img name="" src="http://img2.cache.netease.com/lady/2008/11/13/20081113124851a8ef3.jpg" alt="" />
+                        </div>
+        
+                        <div id="u-2">
+                                <img name="" src="http://img1.cache.netease.com/lady/2008/11/12/200811121527103131e.jpg" alt="" />
+                        </div>
+                </div>
+                
+                <script type="text/javascript">        
+                        var WindowVote2 = new Mo.TabMenu("mouseover");
+        
+                        WindowVote2.TabClass("active","");
+        
+                        WindowVote2.Add(document.getElementById("m-1"),document.getElementById("u-1"));
+                        WindowVote2.Add(document.getElementById("m-2"),document.getElementById("u-2"));
+                        WindowVote2.Play(1);
+                </script>
+
+            </dd>
+            
+            <dt> Mo.FadeBox() </dt>
+            <dd>
+
+                <p>幻灯片。</p>
+
+                <pre>Mo.FadeBox();</pre>
+
+                <div id="fadebox">
+                        <div id="img-1">
+                                <img src="http://img2.cache.netease.com/ent/2008/11/12/2008111214281091c8d.jpg" />
+                                <strong>娜塔莉新片造型曝光泡面头一改淑女形象</strong>
+                                娜塔莉·波特曼近日现身纽约拍摄新片，娜塔莉一改以往的淑女形象，以一头凌乱的泡面头亮相，她在片中的造型也首次曝光。
+                        </div>
+        
+                        <div id="img-2">
+                                <img src="http://img2.cache.netease.com/ent/2008/11/12/200811121436564beba.jpg" />
+                                <strong>妮可获“魅力女性奖”与丈夫大秀恩爱</strong>
+                                11月10日晚，妮可·基德曼在丈夫陪伴下出席了“年度魅力女性”大奖颁奖夜活动。妮可一袭白色晚装高贵迷人，与丈夫大秀恩爱。
+                        </div>
+        
+                        <div id="img-3">
+                                <img src="http://img2.cache.netease.com/ent/2008/11/5/20081105162924d9600.jpg" />
+                                <strong>《美人图》办试映会明星后援团华丽登场</strong>
+                                韩国影片《美人图》昨日举行试映会，金善雅、韩智慧、李政宰等明星后援团华丽现身，为影片赚足了人气。
+                        </div>
+                </div>
+
+                <script type="text/javascript">
+
+                /********************************************************
+                **  参数设置--START  用户只需设置以下参数即可。
+                ********************************************************/
+                var WinFlash = new Mo.FadeBox();
+                        WinFlash.Add(document.getElementById("img-1"));
+                        WinFlash.Add(document.getElementById("img-2"));
+                        WinFlash.Add(document.getElementById("img-3"));
+
+                WinFlash.Speed = 10;
+                WinFlash.Timer = 2000;
+                WinFlash.Play(1);
+                /********************************************************
+                **  参数设置--END
+                ********************************************************/
+
+                </script>
+
+
+            </dd>
+
+        </dl>
+
+        <script type="text/javascript">
+
+        /************* 加载JS 测试 ****************/
+
+        Mo("#btn_dialog").bind('click',function(){
+        
+            Mo.script( "drag", {}, function(){
+            
+                    var dg = new Mo.Dialog( "mo-dialog", "OK", '<img src="../res/images/ok.jpg" />', 390, 0, { "remove" : true, "draged" : true, "minimize_" : true, "maximize" : true, "locked" : true } );
+                    dg.Create();
+            
+            } );
+        
+            
+        });
+
+        </script>
+
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="../packer.html">Packer</a> <span>|</span> <a href="../regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

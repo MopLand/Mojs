@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="../lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="../lib/mo.china.js" type="text/javascript" charset="utf-8"></script>
+<script src="../res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="../res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="../search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../browser.html">Browser</a></li>
+                <li><a href="../selector.html">Selector</a></li>
+                <!--li><a href="../ajax.html">Ajax</a></li-->
+                <!--li><a href="../drag.html">Drag</a></li-->
+                <li><a href="../event.html">Event</a></li>
+                <li><a href="../date.html">Date</a></li>
+                <li><a href="../string.html">String</a></li>
+                <!--li><a href="../number.html">Number</a></li-->
+                <li><a href="../array.html">Array</a></li>
+                <li><a href="../cookie.html">Cookie</a></li>
+                <li><a href="../validate.html">Validate</a></li>
+                <!--li><a href="../hash.html">Hash</a></li-->
+                <li><a href="../method.html">Method</a></li>
+                <li><a href="../api.html">API</a></li>
+            </ul>
+        </div>
+        
+        <div id="locate">
+            Mo &gt; API &gt; Color
+        </div>
+
+        <dl id="entry">
+
+            <dt> Mo.China() </dt>
+            <dd>
+                <p>常用颜色选择器。</p>
+
+                <pre>Mo.Color( this, event, 'color', function( color, obj ){ obj.style.background = color ; });</pre>
+
+                <p> 
+                
+                <select id="province" size="10" style="width:140px;" multiple="multiple" onclick="Mo.China.getValue([document.getElementById('province'),document.getElementById('city')],document.getElementById('zone'));">
+                        <option value="">不限地区</option>
+                </select>                
+                
+                <select id="city" size="10" style="width:140px;" multiple="multiple" onclick="Mo.China.getValue([document.getElementById('province'),document.getElementById('city')],document.getElementById('zone'));">
+                        <option value="">不限城市</option>
+                </select>
+                
+                <textarea rows="11" id="zone" name="zone" style="vertical-align:top; width:200px;"><?php echo $row["zone"];?></textarea>
+                
+                </p>
+                
+                <p><script>
+                
+                Mo.China( document.getElementById('province'),'province');
+                Mo.China( document.getElementById('city'),'city');
+                
+                </script></p>
+
+            </dd>
+
+        </dl>
+
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="../packer.html">Packer</a> <span>|</span> <a href="../regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

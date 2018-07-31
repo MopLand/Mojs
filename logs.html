@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="wrapper">
+    
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browser.html">Browser</a></li>
+                <li><a href="selector.html">Selector</a></li>
+                <!--li><a href="ajax.html">Ajax</a></li-->
+                <!--li><a href="drag.html">Drag</a></li-->
+                <li><a href="event.html">Event</a></li>
+                <li><a href="date.html">Date</a></li>
+                <li><a href="string.html">String</a></li>
+                <!--li><a href="number.html">Number</a></li-->
+                <li><a href="array.html">Array</a></li>
+                <li><a href="cookie.html">Cookie</a></li>
+                <li><a href="validate.html">Validate</a></li>
+                <!--li><a href="hash.html">Hash</a></li-->
+                <li><a href="method.html">Method</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="api.html">API</a></li>
+            </ul>
+        </div>
+
+
+        <dl id="entry">
+
+            <dt> Mo.Logs("...") </dt>
+            <dd>
+
+                <p>调试助手。</p>
+
+                <p>
+                    <button type="button" id="debug">debug</button>
+                    <button type="button" id="point">point</button>
+                    <button type="button" id="alert">alert</button>
+                    <button type="button" id="error">error</button>
+                    <button type="button" id="clear">clear</button>					
+                </p>
+
+                <p id="logs">
+                    调试日志显示在这里。
+                </p>
+                
+                <table border="0"cellpadding="0" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td width="25%">属性：</td>
+                        <td width="25%">值：</td>
+                        <td width="25%">属性：</td>
+                        <td width="25%">值：</td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                          .debug()</td>
+                        <td>正常调试信息</td>
+                        <td>.point()</td>
+                      <td>消息</td>
+                    </tr>
+                    <tr>
+                        <td>
+                      .alert()</td>
+                        <td>警告</td>
+                        <td>.error()</td>
+                      <td>错误</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        .clear()</td>
+                        <td>消除</td>
+                        <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                    </tr>
+                </table>
+
+            </dd>
+
+        </dl>
+
+
+        <script type="text/javascript">
+
+        /************* 调试助手 测试 ****************/
+
+        Mo.Logs.start("logs");
+
+        Mo("#clear").bind('click',function(){
+            Mo.Logs.clear();
+        });
+
+        Mo("#debug").bind('click',function(){
+            Mo.Logs.debug('情况正常！');
+        });
+
+        Mo("#point").bind('click',function(){
+            Mo.Logs.point('嗯，这里需要注意一下！');
+        });
+
+        Mo("#alert").bind('click',function(){
+            Mo.Logs.alert('注意，情况不妙！');
+        });
+
+        Mo("#error").bind('click',function(){
+            Mo.Logs.error('注意，情况不妙！');
+        });
+
+        </script>
+
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="packer.html">Packer</a> <span>|</span> <a href="regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

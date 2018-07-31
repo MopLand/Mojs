@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browser.html">Browser</a></li>
+                <li><a href="selector.html">Selector</a></li>
+                <!--li><a href="ajax.html">Ajax</a></li-->
+                <!--li><a href="drag.html">Drag</a></li-->
+                <li><a href="event.html">Event</a></li>
+                <li><a href="date.html">Date</a></li>
+                <li><a href="string.html">String</a></li>
+                <!--li><a href="number.html">Number</a></li-->
+                <li><a href="array.html">Array</a></li>
+                <li><a href="cookie.html">Cookie</a></li>
+                <li><a href="validate.html">Validate</a></li>
+                <!--li><a href="hash.html">Hash</a></li-->
+                <li><a href="method.html">Method</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="api.html">API</a></li>
+            </ul>
+        </div>
+
+
+        <dl id="entry">
+
+            <dt> Mo.Date( datetime ) </dt>
+            <dd>				
+
+                <p>执行日期时间处理操作。</p>
+
+                <blockquote>
+                    <p> <strong>datetime</strong>  日期时间对象或时间戳，默认为当前日期时间</p>
+                </blockquote>
+                
+            </dd>
+
+            <dt> .time() </dt>
+            <dd>
+
+                <p>获取现在的Unix时间戳。</p>
+
+                <pre>Mo.Date( datetime ).time();</pre>
+
+                <p id="time"></p>
+                
+                <script type="text/javascript"> window.setInterval( function(){ Mo("#time").html( Mo.Date().time() ); }, 1000 ) </script>
+
+            </dd>
+            
+            <dt> .leapyear() </dt>
+            <dd>
+
+                <p>判断是否是闰年,返回 true 或者 false。</p>
+
+                <pre>Mo.Date( datetime ).leapyear();</pre>
+
+                <script type="text/javascript"> Mo.write( Mo.Date().leapyear() ); </script>
+
+            </dd>
+            
+            <dt> .days() </dt>
+            <dd>
+
+                <p>返回月天数。</p>
+
+                <pre>Mo.Date( datetime ).days();</pre>
+
+                <script type="text/javascript"> Mo.write( Mo.Date().days() ); </script>
+
+                <p>返回2011年2月天数。</p>
+
+                <pre>Mo.Date( 1328029261 ).days();</pre>
+
+                <script type="text/javascript"> Mo.write( Mo.Date( 1328029261 ).days() ); </script>
+
+            </dd>
+
+        </dl>
+
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="packer.html">Packer</a> <span>|</span> <a href="regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

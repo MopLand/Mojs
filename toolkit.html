@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browser.html">Browser</a></li>
+                <li><a href="selector.html">Selector</a></li>
+                <!--li><a href="ajax.html">Ajax</a></li-->
+                <!--li><a href="drag.html">Drag</a></li-->
+                <li><a href="event.html">Event</a></li>
+                <li><a href="date.html">Date</a></li>
+                <li><a href="string.html">String</a></li>
+                <!--li><a href="number.html">Number</a></li-->
+                <li><a href="array.html">Array</a></li>
+                <li><a href="cookie.html">Cookie</a></li>
+                <li><a href="validate.html">Validate</a></li>
+                <!--li><a href="hash.html">Hash</a></li-->
+                <li><a href="method.html">Method</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="api.html">API</a></li>
+            </ul>
+        </div>
+
+
+        <dl id="entry">
+
+            <dt> Mo.Toolkit </dt>
+            <dd>				
+
+                <p>实用工具箱，提供浏览器视口、滚动条位置等获取接口。</p>
+                
+            </dd>
+
+            <dt> .is( object ) </dt>
+            <dd>
+
+                <p>判断对象类型。</p>
+                
+                <blockquote>
+                    <p> <strong>object</strong> 需要验证的对象</p>
+                </blockquote>
+                
+                <pre>Mo.Toolkit.is( [1,2,3] );</pre>	
+
+                <p>
+                        <script type="text/javascript">
+                        Mo.write( Mo.Toolkit.is( [1,2,3] ) );
+                        </script>
+                </p>                
+                
+                <pre>Mo.Toolkit.is( document.body );</pre>	
+
+                <p>
+                        <script type="text/javascript">
+                        Mo.write( Mo.Toolkit.is( document.body ) );
+                        </script>
+                </p>
+
+            </dd>
+
+            <dt> .isOnDom( node ) </dt>
+            <dd>
+
+                <p>判断目标节点是否存在于 DOM 中。</p>
+                
+                <blockquote>
+                    <p> <strong>node</strong> 节点对象</p>
+                </blockquote>
+                
+                <pre>Mo.Toolkit.isOnDom( document.body );</pre>
+
+                <p>                
+                <script type="text/javascript">
+                Mo.write( Mo.Toolkit.isOnDom( document.body ) );
+                </script>                
+                </p>
+
+            </dd>
+
+            <dt> .contains( a, b ) </dt>
+            <dd>
+
+                <p>检测 b 节点是否包含在于 a 元素中。</p>
+                
+                <blockquote>
+                    <p> <strong>a</strong> 节点对象</p>
+                    <p> <strong>b</strong> 节点对象</p>
+                </blockquote>
+                
+                <pre>Mo.Toolkit.contains( document.body, Mo.$('wrapper') );</pre>
+                
+                <script type="text/javascript">
+                Mo.write( Mo.Toolkit.contains( document.body, Mo.$('wrapper') ) );
+                </script>
+
+            </dd>
+            
+            <dt> .getViewportSize() </dt>
+            <dd>
+
+                <p>获取当前视口信息。</p>
+                
+                <pre>Mo.Toolkit.getViewportSize( );</pre>
+                
+                <script type="text/javascript">
+                Mo.write( dump( Mo.Toolkit.getViewportSize() ) );
+                </script>
+
+            </dd>
+            
+            <dt> .getClinetRect( ele ) </dt>
+            <dd>
+
+                <p>获取元素在视口内的位置信息。</p>
+                
+                <blockquote>
+                    <p> <strong>ele</strong> 元素对象</p>
+                </blockquote>
+                
+                <pre>Mo.Toolkit.getClinetRect( Mo.$('element') );</pre>
+                
+                <p>
+                    <button id="btn_element">测试</button>
+                </p>
+                
+                <p id="element">
+                </p>
+                
+                <script type="text/javascript">
+                Mo( "#btn_element" ).bind( 'click' ,function( index ,event ){ 
+                    Mo("#element").html( dump( Mo.Toolkit.getClinetRect( Mo.$('element') ) ) ); 
+                });
+                </script>
+
+            </dd>
+            
+            <dt> .getScrollPosition( ) </dt>
+            <dd>
+
+                <p>获取当前滚动条信息。</p>
+                
+                <pre>Mo.Toolkit.getScrollPosition( );</pre>
+                
+                <script type="text/javascript">                
+                Mo.write( dump( Mo.Toolkit.getScrollPosition( ) ) );
+                </script>
+
+            </dd>
+
+        </dl>
+
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="packer.html">Packer</a> <span>|</span> <a href="regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

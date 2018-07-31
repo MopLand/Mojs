@@ -1,0 +1,1 @@
+<?php echo $_GET["callback"];?>({'html':'<a href="http://www.veryide.com/projects/mojs/json.php?callback=<?php echo $_GET["callback"];?>" target="_blank">Mo.js</a>'});

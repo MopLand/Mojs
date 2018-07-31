@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="../lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="../lib/mo.interface.js" type="text/javascript" charset="utf-8"></script>
+<script src="../res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="../res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="../search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../browser.html">Browser</a></li>
+                <li><a href="../selector.html">Selector</a></li>
+                <!--li><a href="../ajax.html">Ajax</a></li-->
+                <!--li><a href="../drag.html">Drag</a></li-->
+                <li><a href="../event.html">Event</a></li>
+                <li><a href="../date.html">Date</a></li>
+                <li><a href="../string.html">String</a></li>
+                <!--li><a href="../number.html">Number</a></li-->
+                <li><a href="../array.html">Array</a></li>
+                <li><a href="../cookie.html">Cookie</a></li>
+                <li><a href="../validate.html">Validate</a></li>
+                <!--li><a href="../hash.html">Hash</a></li-->
+                <li><a href="../method.html">Method</a></li>
+                <li><a href="../api.html">API</a></li>
+            </ul>
+        </div>
+        
+        <div id="locate">
+            Mo &gt; API &gt; Interface
+        </div>
+
+        <dl id="entry">
+
+            <dt> Mo.Command( cmd , param , func ) </dt>
+            <dd>
+                <p>浏览器交互命令。</p>
+
+				<blockquote>
+                    <p> <strong>cmd</strong> 需要执行的命令 </p>
+                    <p> <strong>param</strong> 参数值 </p>
+                    <p> <strong>func</strong> 回调函数 </p>
+                </blockquote>
+                
+                <p>cmd 可接受参数</p>
+
+                <blockquote>
+                    <p> <strong>favorite</strong>  设置为书签（添加到收藏）</p>
+                    <p> <strong>homepage</strong>  设置为主页</p>
+                </blockquote>
+                
+                <p>param 可接受参数（json 格式）</p>
+
+                <blockquote>
+                    <p> <strong>title</strong>  标题名称</p>
+                    <p> <strong>href</strong>  链接地址</p>
+                </blockquote>
+
+                <pre>Mo.Command( 'favorite', {'title':'我是标题', 'href':location.href} );</pre>
+
+                <p> <a href="javascript:void(0);" onclick="Mo.Command('favorite', {'title':'我是标题', 'href':location.href});">加入收藏</a> </p>                
+
+                <pre>Mo.Command( 'homepage' );</pre>
+
+                <p> <a href="javascript:void(0);" onclick="Mo.Command('homepage');">设为首页</a> </p>                
+                
+            </dd>
+
+            <dt> Mo.Clipboard( text , func ) </dt>
+            <dd>
+                <p>复制到剪贴板。</p>
+
+				<blockquote>
+                    <p> <strong>text</strong> 文本内容 </p>
+                    <p> <strong>func</strong> 回调函数 </p>
+                </blockquote>
+
+                <pre>Mo.Clipboard( document.title+'\n'+location.href , function( text ){ alert('已复制如下信息到剪贴板:\n\n'+text); } );</pre>
+
+                <p> <a href="javascript:void(0);" onclick="Mo.Clipboard( document.title+'\n'+location.href , function( text ){ alert('已复制如下信息到剪贴板:\n\n'+text); } );">复制到剪贴板</a> </p>
+                
+            </dd>
+
+        </dl>
+
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="../packer.html">Packer</a> <span>|</span> <a href="../regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

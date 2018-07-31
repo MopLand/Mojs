@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="../lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="../lib/mo.drag.js" type="text/javascript" charset="utf-8"></script>
+<script src="../res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="../res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="../search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../browser.html">Browser</a></li>
+                <li><a href="../selector.html">Selector</a></li>
+                <!--li><a href="../ajax.html">Ajax</a></li-->
+                <!--li><a href="../drag.html">Drag</a></li-->
+                <li><a href="../event.html">Event</a></li>
+                <li><a href="../date.html">Date</a></li>
+                <li><a href="../string.html">String</a></li>
+                <!--li><a href="../number.html">Number</a></li-->
+                <li><a href="../array.html">Array</a></li>
+                <li><a href="../cookie.html">Cookie</a></li>
+                <li><a href="../validate.html">Validate</a></li>
+                <!--li><a href="../hash.html">Hash</a></li-->
+                <li><a href="../method.html">Method</a></li>
+                <li><a href="../api.html">API</a></li>
+            </ul>
+        </div>
+        
+        <div id="locate">
+            Mo &gt; API &gt; Drag
+        </div>
+
+        <dl id="entry">
+
+            <dt> Mo.Drag("...") </dt>
+            <dd>
+            
+                <p>拖拽和放置对象</p>
+                
+                <pre>new Mo.Drag( Mo("#example").item(0) );</pre>
+                
+                <img id="example" src="../res/images/eva.jpg" style="position:relative" />
+                
+                <script language="javascript">
+                    new Mo.Drag( Mo("#example").item(0) );
+                </script>
+
+                
+                <p>支持以下回调事件：</p>
+                
+                <table border="0"cellpadding="0" cellspacing="1">
+                    <thead>
+                    <tr>
+                        <td width="50%">事件：</td>
+                        <td>描述：</td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            onStart
+                        </td>
+                        <td>
+                            开始拖动时响应
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            onEnd
+                        </td>
+                        <td>
+                            拖动结束后响应
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            onDrag
+                        </td>
+                        <td>
+                            拖动中响应
+                        </td>
+                    </tr>
+                </table>
+
+            </dd>				
+
+            <dt> .onStart( x, y , e ) </dt>
+            <dd>
+
+                <p>开始拖动调用。</p>
+
+                <blockquote>
+                    <p> <strong>x</strong> X 坐标</p>
+                    <p> <strong>y</strong> Y 坐标</p>
+                    <p> <strong>e</strong> Event 事件</p>
+                </blockquote>
+
+                <pre>new Mo.Drag( Mo("#example").item(0) );</pre>
+
+                <p id="box-a"></p>                    
+
+            </dd>
+
+            <dt> .onDrag( x, y , e ) </dt>
+            <dd>
+
+                <p>拖动中调用。</p>
+
+                <blockquote>
+                    <p> <strong>x</strong> X 坐标</p>
+                    <p> <strong>y</strong> Y 坐标</p>
+                    <p> <strong>e</strong> Event 事件</p>
+                </blockquote>
+
+                <pre>new Mo.Drag( Mo("#example").item(0) );</pre>
+
+                <p id="box-c"></p>
+
+            </dd>
+            
+            <dt> .onEnd( x, y , e ) </dt>
+            <dd>
+
+                <p>结束拖动调用。</p>
+
+                <blockquote>
+                    <p> <strong>x</strong> X 坐标</p>
+                    <p> <strong>y</strong> Y 坐标</p>
+                    <p> <strong>e</strong> Event 事件</p>
+                </blockquote>
+
+                <pre>new Mo.Drag( Mo("#example").item(0) );</pre>
+
+                <p id="box-b"></p>
+
+            </dd>
+            
+            <dt class="more"> 局部拖动控制父对象 </dt>
+            <dd>
+
+                <pre>new Mo.Drag( Mo("#handle").item(0) , Mo("#root").item(0) );</pre>
+
+                <div id="root" style="left:450px; top:600px; padding:5px; position:absolute; height:300px; width:300px; background-color:#F4F4F4; border:1px solid #999;">
+                    <div id="handle" style="padding:5px; color:white; background-color:#2BBFC3; font-weight: bold;">Handle - Ads</div>
+                    拖动层测试 - Drag and drop
+                    
+                    <script type="text/javascript">
+                    google_ad_client = "pub-7104481011578148";
+                    /* 300x250, 创建于 10-5-24 */
+                    google_ad_slot = "4035360673";
+                    google_ad_width = 300;
+                    google_ad_height = 250;
+                    </script>
+                    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                    
+                </div>
+                
+                <script language="javascript">
+                    var drag = new Mo.Drag( Mo("#handle").item(0) , Mo("#root").item(0) );
+                    
+                    drag.onStart = function( x,y ){
+                        Mo("#box-a").html("x:"+x+" y:"+y); 
+                    }
+                    
+                    drag.onEnd = function( x,y ){
+                        Mo("#box-b").html("x:"+x+" y:"+y);
+                    }
+                    
+                    drag.onDrag = function( x,y ){
+                        Mo("#box-c").html("x:"+x+" y:"+y);
+                    }
+                </script>
+
+            </dd>
+            
+            <dt class="more"> 模拟滚动条 </dt>
+            <dd>
+
+                <pre>new Mo.Drag( Mo("#handle").item(0) , Mo("#root").item(0) );</pre>
+
+                <div style="width: 350px; height: 200px; overflow: hidden; border: 1px solid black; float: left; margin-right: 10px; background-color: lightyellow; position: relative">
+                    <div id="scrollcontent" style="position: absolute; left: 0; top: 0; padding:5px; text-align:center;">
+
+                        <script type="text/javascript">
+                        google_ad_client = "pub-7104481011578148";
+                        /* 336x280, 创建于 11-1-12 */
+                        google_ad_slot = "0730936196";
+                        google_ad_width = 336;
+                        google_ad_height = 280;
+                        </script>
+                        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                        Some Text <br />
+                        Some Text <br />
+                        Some Text <br />
+                    </div>
+                </div>
+                
+                <div style="width: 30px; float: left">
+                    <div id="scroll" style="left:0; top:0; position:relative; height:50px; width:12px; background-color:#eee;		border:1px outset #eee;"></div>
+                </div>
+                 
+                <script language="javascript"> 
+                var aThumb = document.getElementById("scroll");
+                var scrolldiv=document.getElementById("scrollcontent");
+                
+                var d = new Mo.Drag(aThumb, null, 0, 0, 0, 150);
+                
+                d.onDrag = function(x, y) {
+                    scrolldiv.style.top= y * (-1) +"px";
+                }
+                
+                </script>
+
+            </dd>
+            
+            <dt class="more"> 限定横向固定长度拖动 </dt>
+            <dd>
+
+                <pre>new Mo.Drag( Mo("#thumb").item(0) , null, 0, 300, 0, 0);</pre>
+
+                <div id="thumb" style="position: relative; left:0; top:0; height:12px; width:50px; background-color:#eee; border:1px outset #eee;"></div>
+                
+                <script language="javascript">
+                new Mo.Drag( Mo("#thumb").item(0) , null, 0, 300, 0, 0);
+                </script>
+
+            </dd>
+            
+            <dt class="more"> 限定在可拖动范围内 </dt>
+            <dd>
+
+                <pre>new Mo.Drag( Mo("#simple").item(0) , null, 0, 274, 0, 248);</pre>
+
+                <div id="pbox" style="position:relative; width:300px; height:275px; border:1px dashed #333399;">
+                    <img id="simple" title="isn't this simple pointer much better?" style="position:absolute; top:230px; left:200px;" src="../res/images/g.gif" />
+                </div>
+                
+                <script language="javascript">
+                new Mo.Drag( Mo("#simple").item(0) , null, 0, 274, 0, 248);
+                </script>
+
+            </dd>
+
+        </dl>
+        
+        
+        
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="../packer.html">Packer</a> <span>|</span> <a href="../regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

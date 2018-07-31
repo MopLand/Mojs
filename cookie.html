@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browser.html">Browser</a></li>
+                <li><a href="selector.html">Selector</a></li>
+                <!--li><a href="ajax.html">Ajax</a></li-->
+                <!--li><a href="drag.html">Drag</a></li-->
+                <li><a href="event.html">Event</a></li>
+                <li><a href="date.html">Date</a></li>
+                <li><a href="string.html">String</a></li>
+                <!--li><a href="number.html">Number</a></li-->
+                <li><a href="array.html">Array</a></li>
+                <li><a href="cookie.html">Cookie</a></li>
+                <li><a href="validate.html">Validate</a></li>
+                <!--li><a href="hash.html">Hash</a></li-->
+                <li><a href="method.html">Method</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="api.html">API</a></li>
+            </ul>
+        </div>
+
+
+        <dl id="entry">
+
+            <dt> Mo.Cookie </dt>
+            <dd>				
+
+                <p>执行 Cookies 处理操作。</p>
+                
+                <p><em><strong>注意：</strong>需要在网络环境中测试，因为读取了 location.domain </em></p>
+
+            </dd>
+
+            <dt> Mo.Cookie.set( key, value ) </dt>
+            <dd>				
+
+                <p>设置指定 Cookies 项的值。</p>
+                <blockquote>
+                    <p> <strong>key</strong> cookie对应的键 </p>
+                    <p> <strong>value</strong> cookie对应的值 </p>
+                </blockquote>
+                
+                <p>设置键名称为"key"的cookie值为"123"</p>
+                
+                <pre> Mo.Cookie.set( "key" , "123" ); </pre>
+                
+                <p>
+                    <input type="text" value="mo.js" id="set" />
+                    <button type="button" id="btn_set">测试</button>
+                </p>
+
+            </dd>
+
+            <dt> Mo.Cookie.get( key ) </dt>
+            <dd>
+
+                <p>返回指定 Cookies 项的值。</p>
+
+                <blockquote>
+                    <p> <strong>key</strong> cookie对应的键 </p>
+                </blockquote>
+
+                <p>返回键为"key"的cookie的值</p>
+
+                <pre>Mo.Cookie.get( "key" );</pre>
+                
+                <p id="get"></p>
+                
+                <p>
+                    <button type="button" id="btn_get">测试</button>
+                </p>
+
+            </dd>
+
+            <dt> Mo.Cookie.unset( key [, path, domain] ) </dt>
+            <dd>				
+
+                <p>删除指定 Cookies 项和值。</p>
+
+                <blockquote>
+                        <p> <strong>key</strong> cookie对应的键 </p>
+                        <p> <strong>path</strong> 可选，cookie创建的路径 </p>
+                        <p> <strong>domain</strong> 可选，默认null，cookie创建的域 </p>
+                </blockquote>
+                
+                <p>删除键名称为"abc"的Cookies </p>
+
+                <pre> Mo.Cookie.unset("abc"); </pre>
+
+            </dd>
+
+            <dt> Mo.Cookie.clear() </dt>
+            <dd>				
+
+                <p>从 Cookies 中移除所有项和值。</p>
+                
+                <pre> Mo.Cookie.clear(); </pre>
+                
+                <p>
+                    <button type="button" id="btn_clear">测试</button>
+                </p>
+
+            </dd>
+
+        </dl>
+
+        <script type="text/javascript">
+
+
+        /************* get 测试 ****************/
+
+        Mo("#btn_get").bind( 'click' , function(){
+
+            Mo("#get").html( Mo.Cookie.get( "key" ) );
+            
+        } );
+        
+        Mo("#get").html( Mo.Cookie.get( "key" ) );	
+
+        /************* set 测试 ****************/
+
+        Mo("#btn_set").bind( 'click' , function(){
+                                                
+            Mo.Cookie.set( "key" , Mo("#set").value() );
+            
+        } );		
+
+
+        /************* unset 测试 ****************/
+
+        Mo("#btn_unset").bind( 'click' , function(){
+
+            Mo.Cookie.unset( "key" );		
+
+        } );		
+
+
+        /************* clear 测试 ****************/
+
+        Mo("#btn_clear").bind( 'click' , function(){
+
+            Mo.Cookie.clear();
+
+        } );		
+
+
+        </script>
+        
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="packer.html">Packer</a> <span>|</span> <a href="regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

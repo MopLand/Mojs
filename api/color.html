@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="../lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="../lib/mo.color.js" type="text/javascript" charset="utf-8"></script>
+<script src="../res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="../res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../res/ui.css" media="screen" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="../search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../browser.html">Browser</a></li>
+                <li><a href="../selector.html">Selector</a></li>
+                <!--li><a href="../ajax.html">Ajax</a></li-->
+                <!--li><a href="../drag.html">Drag</a></li-->
+                <li><a href="../event.html">Event</a></li>
+                <li><a href="../date.html">Date</a></li>
+                <li><a href="../string.html">String</a></li>
+                <!--li><a href="../number.html">Number</a></li-->
+                <li><a href="../array.html">Array</a></li>
+                <li><a href="../cookie.html">Cookie</a></li>
+                <li><a href="../validate.html">Validate</a></li>
+                <!--li><a href="../hash.html">Hash</a></li-->
+                <li><a href="../method.html">Method</a></li>
+                <li><a href="../api.html">API</a></li>
+            </ul>
+        </div>
+        
+        <div id="locate">
+            Mo &gt; API &gt; Color
+        </div>
+
+        <dl id="entry">
+
+            <dt> Mo.Color() </dt>
+            <dd>
+                <p>常用颜色选择器。</p>
+
+                <pre>Mo.Color( this, event, 'mo-color', function( color, obj ){ obj.style.background = color ; });</pre>
+
+                <p> <div onclick="Mo.Color( this , event, 'mo-color', function( color, obj ){ obj.style.background = color ; });" style="border:#666 solid 1px; width:20px; height:20px;"></div> </p>
+                
+                <pre>Mo.Color( this, event, 'mo-color', function( color, obj ){ obj.style.background = color ; }, 21, 0 );</pre>
+
+                <p> <div onclick="Mo.Color( this , event, 'mo-color', function( color, obj ){ obj.style.background = color ; }, 21, 0 );" style="border:#666 solid 1px; width:20px; height:20px;"></div> </p>                
+
+            </dd>
+
+            <dt> Mo.Color.RGB() </dt>
+            <dd>
+
+                <p>将 16 进制颜色值转为 RGB 颜色值。</p>
+
+                <pre>Mo.Color.RGB( '#FFFFFF' );</pre>
+
+                <p><script>Mo.write( Mo.Color.RGB( '#FFFFFF' ) );</script></p>
+
+            </dd>
+            
+            <dt> Mo.Color.HEX() </dt>
+            <dd>
+
+                <p>将 RGB 颜色值转为 16 进制颜色值。</p>
+
+                <pre>Mo.Color.HEX( [255,255,255] );</pre>
+
+                <p><script>Mo.write( Mo.Color.HEX( [255,255,255] ) );</script></p>
+
+            </dd>
+            
+            <dt> Mo.Color.rand() </dt>
+            <dd>
+
+                <p>将产生一个随机颜色值。</p>
+
+                <pre>Mo.Color.rand( );</pre>
+
+                <p> <button type="submit" id="btn_rand">测试</button> </p>
+
+                <p id="rand">  </p>
+
+            </dd>
+
+        </dl>
+        
+        <script type="text/javascript">
+
+        /************* 随机颜色值 测试 ****************/
+
+        Mo("#btn_rand").bind('click',function(){
+											  
+			var color = Mo.Color.rand();
+
+            Mo("#rand").style( {"color":color} ).html( color );
+
+        });
+        
+        </script>
+    </div>
+
+    <div id="footer">
+
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="../packer.html">Packer</a> <span>|</span> <a href="../regex.html">Regex</a>
+
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>

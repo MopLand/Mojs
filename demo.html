@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<link href="res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<style type="text/css">
+.layer{position:fixed;right:0;bottom:0;_position:absolute;_top:expression((ff=document.documentElement.scrollTop + document.documentElement.clientHeight - this.offsetHeight)+'px');}*{_text-overflow:ellipsis;}
+</style>
+
+<div class="layer"> 固定的内容
+</div>
+
+    <h1 id="mo-js"> Mo<span>.js</span> </h1>
+    <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+    
+    <div id="naver">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="browser.html">Browser</a></li>
+            <li><a href="selector.html">Selector</a></li>
+            <!--li><a href="ajax.html">Ajax</a></li-->
+            <li><a href="array.html">Array</a></li>
+            <li><a href="function.html">Function</a></li>
+            <li><a href="string.html">String</a></li>
+            <li><a href="number.html">Number</a></li>
+            <li><a href="validate.html">Validate</a></li>
+            <!--li><a href="hash.html">Hash</a></li-->
+            <li><a href="function.html">Function</a></li>
+            <li><a href="api.html">API</a></li>
+        </ul>
+    </div>
+    
+    <div id="desc">
+    
+        有了阳光和雨水，种子就能发芽。我们我们希望有自己的特色：<strong>小巧、实用、优美、可扩展和易维护</strong>
+    </div>
+
+    <dl id="entry">
+
+        <dt> 页面载入事件 </dt>
+        <dd>
+            <p id="ready"></p>
+        </dd>
+
+        <dt> 浏览器信息 </dt>
+        <dd>
+
+            <p id="browser">这里将会显示浏览器信息！</p>
+
+        </dd>
+        
+        <!--dt> 加解密字符串 </dt>
+        <dd>
+            <!--pre>Mo("#code").html( Mo.encrypt( 'layxsgggbb',key ) );</pre-->
+
+            <!--p>原文：Lay 密钥：xxx</p>
+
+            <p>加密后的内容：<span id="encrypt"></span></p>
+
+            <p>解密后的内容：<span id="decrypt"></span></p>
+
+            <script type="text/javascript" src="http://localhost/Apps/v3.0/adsview/?action=single&key=new&charset=gbk"><!--Name:保留测试广告位 Key:new Date:2010-07-06 08:58:36--></script>
+
+            <!--div id="xxxxxxx" style="width:100px; height:1px; position:absolute; left:0; bottom:0; background:red;"></div> 
+
+            <script>
+            window.onscroll = function(){
+                document.getElementById('xxxxxxx').style.top = document.documentElement.scrollTop + 300 + "px";
+            };
+            </script>
+
+        </dd-->
+
+        <dt> 动画效果 </dt>
+        <dd>				
+
+            <p> <button type="button" id="left">左移</button> <button type="button" id="right">右移</button> </p>
+
+            <div id="motion_box">
+
+            </div>
+
+        </dd>
+        
+
+        <dt> 调试助手 </dt>
+        <dd>				
+
+            <p> <button type="button" id="debug">debug</button> <button type="button" id="info">info</button> <button type="button" id="alert">alert</button> <button type="button" id="clear">clear</button> </p>
+
+            <p id="logs">
+                调试日志显示在这里。
+            </p>
+
+        </dd>
+        
+        <dt> 拖动层 </dt>
+        <dd>
+
+            <div id="drag">我是能拖动的哦！</div>
+
+        </dd>
+
+        <dt> Ajax </dt>
+        <dd>
+
+            <p><button type="button" id="ajax">Test</button></p>
+
+            <p id="ajax_box">这里将会显示Ajax内容！</p>
+
+        </dd>
+
+        <dt> 事件绑定 </dt>
+        <dd>				
+
+            <p><button type="button" id="bind">Test</button></p>
+            <p id="bind_box"></p>
+
+        </dd>
+        
+
+        <dt> 随机字符 </dt>
+        <dd>
+            
+
+            <p><button type="button" id="random">Random</button> <button type="button" id="between">Between</button></p>
+            <p id="random_box"></p>
+
+        </dd>
+
+        <dt> 写入值 测试 </dt>
+        <dd>				
+
+            <p>
+                
+                text <br />
+            
+                <input id="text" value="" />
+                
+                <br /> hidden <br />
+                
+                <input id="hidden" value="" />
+                
+                <br /> radio <br />
+                
+                A <input name="radio" type="radio" class="radio" value="A" />
+                B <input name="radio" type="radio" class="radio" value="B" />
+                C <input name="radio" type="radio" class="radio" value="C" />
+                
+                <br /> checkbox <br />
+                
+                A <input name="checkbox" type="checkbox" class="checkbox" value="A" />
+                B <input name="checkbox" type="checkbox" class="checkbox" value="B" />
+                C <input name="checkbox" type="checkbox" class="checkbox" value="C" />
+                
+                <br /> textarea <br />
+                
+                <textarea id="textarea">xxx</textarea>
+                
+                <br /> select <br />
+                
+                <select id="select">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+                
+                <br /> select multiple <br />
+                
+                <select id="multiple" multiple="multiple">
+                    <option value="A" selected="selected">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>                    
+                
+            </p>
+
+        </dd>
+        
+        <dt> MD5 和 Sha1 测试 </dt>
+        <dd>				
+            
+            <p>
+                字符：<input id="source" value="" />
+            </p>
+
+            <p>
+                方式：
+                <select id="pattern">
+                    <option value="md5">md5</option>
+                    <option value="sha1">sha1</option>
+                </select>
+            </p>
+
+            <p><button type="button" id="encrypt">执行</button></p>
+
+            <p id="result">
+            这里显示加密结果！
+            </p>
+
+        </dd>			
+        
+        <dt> 显示/隐藏对象 </dt>
+        <dd>				
+            
+            <p><button type="button" id="hide">Hide</button> <button type="button" id="show">Show</button></p>
+
+            <p id="content">
+                我叫 Mo.js ，你可以称呼我为小 Mo。
+            </p>
+
+        </dd>			
+
+        <dt> 对象位置信息 </dt>
+        <dd>				
+
+            <p><button type="button" id="pos">Test</button></p>
+
+            <p id="pos_box">
+                
+            </p>
+
+        </dd>
+        
+        <dt> Cookie 写入和读取 </dt>
+        <dd>				
+
+            <p><button type="button" id="cookie">Test</button> <button type="button" id="cookie_read">Read</button></p>
+
+            <p id="cookie_box">
+                这里显示Cookies内容。
+            </p>
+
+        </dd>
+
+        <dt> URL参数获取 </dt>
+        <dd>				
+
+            <p> <a href="?key=xxx#url" name="url">?key=xxx</a> <a href="?#url">?</a> <button type="button" id="url">Test</button></p>
+
+            <p id="url_box">
+                这里显示Cookies内容。
+            </p>
+
+        </dd>
+
+        <dt> 禁用/启用对象 </dt>
+        <dd>				
+
+            <p> <button type="button" id="disabled">disabled</button> <button type="button" id="enabled">enabled</button> </p>
+
+            <p id="display">
+                这里是操作的内容。
+            </p>
+
+        </dd>
+    
+    </dl>
+    
+    
+    <script type="text/javascript">
+    
+    /************* 数组扩展 测试 ****************/
+    
+    //Mo.Array.test();
+
+    /************* 页面载入 测试 ****************/
+
+    Mo.ready(function(){ Mo("#ready").html('我很努力的把页面加载好了！'); });
+    
+    Mo.resize(function(){ Mo("#ready").html('页面尺寸发生变化了！'); });
+
+    Mo("#build").html( "当前版本：" + Mo.version + " 最后更新：" + Mo.build );
+    
+    Mo("#menu ul li a").foreach(function(ele){
+        if( ele.href == location.href ){
+            ele.className = "active";
+        }
+    
+    });
+    
+    /************* 浏览器信息 测试 ****************/
+    
+    Mo("#browser").html( "客户端名称：" + Mo.Browser.name + " 版本：" + Mo.Browser.version +  " 语言：" + Mo.Browser.lang + ( Mo.Browser.maxthon ? "傲游浏览器（ Ver:"+ Mo.Browser.maxthon.version +"）路过！" : "" ) + ( Mo.Browser.mobile ? "移动设备" : "" ) );	
+    
+    /************* xxxxxxxxx 测试 ****************/
+
+    //Mo.ready(function(){ alert( Mo.isArray( [''] ) ); });
+
+    //Mo.ready(function(){ alert( Mo.isFunction( function(){} ) ); });
+
+    //alert( Object.prototype.toString.apply( document.getElementsByName("div") ) );
+
+    //document.images
+
+    //Mo.ready(function(){ alert( Mo.isElement( document.images ) ); });
+
+    /************* 调试助手 测试 ****************/
+
+    Mo.Logs.start("logs");
+
+    Mo("#clear").bind('click',function(){
+        Mo.Logs.clear();
+    });
+
+    Mo("#debug").bind('click',function(){
+        Mo.Logs.debug('情况正常！');
+    });
+
+    Mo("#info").bind('click',function(){
+        Mo.Logs.info('嗯，这里需要注意一下！');
+    });
+
+    Mo("#alert").bind('click',function(){
+        Mo.Logs.alert('注意，情况不妙！');
+    });
+
+    /************* 动画效果 测试 ****************/
+    
+    //"top":{"min":30,"max":600},
+
+    Mo("#left").bind('click',function(){
+        Mo("#motion_box").style( {"position":"absolute","width":"50","height":"50","background":"red"} ).motion( 20, {
+            //"opacity":{"min":10,"max":100},
+            "left":{"min":300,"max":600}
+        });	
+    });
+    
+    Mo("#right").bind('click',function(){
+        Mo("#motion_box").style( {"position":"absolute","width":"50","height":"50","background":"red"} ).motion( 20, {
+            //"opacity":{"min":10,"max":100},
+            "right":{"min":300,"max":600}
+        });	
+    });
+    
+    
+    /************* 加解密 测试 ****************/
+    
+    Mo("#encrypt").bind('click',function(){
+    
+        Mo("#result").html( Mo("#pattern").value()=="md5" ? Mo.md5( Mo("#source").value() ) : Mo.sha1( Mo("#source").value() ) );		
+        
+    });		
+    
+    /************* 拖动层 测试 ****************/
+    
+    Mo("#drag").style({"position":"absolute"});
+    
+    //Mo.drag.init( Mo("#test") );
+
+    /************* Ajax 测试 ****************/
+    
+    Mo("#ajax").bind( 'click' , function(){
+        
+        var ajax = new Mo.ajax("test.html");
+        ajax.onCompletion = function(){			
+            Mo("#ajax_box").html( ajax.response );
+        };
+        ajax.send();			
+        
+    } );		
+
+    /************* 事件绑定 测试 ****************/
+    
+    Mo("#bind").bind('click',function(){ Mo("#bind_box").html("你点了我一下！");  Mo("#bind").unbind('click').html('click').disabled() });
+    
+    /************* 随机字符 测试 ****************/
+    
+    Mo("#random").bind('click',function(){
+        Mo("#random_box").html( Mo.random(40,true,true,true) ).style({"color":"red","fontSize":"20px"});
+    });
+
+    Mo("#between").bind('click',function(){
+        Mo("#random_box").html( Mo.between(40,100) );
+    });		
+    /************* 写入值 测试 ****************/
+    
+    Mo("#text").style({"color":"red","fontSize":"20px"}).value( "文字的颜色是" + Mo("#text").style("color") );
+    
+    Mo("#hidden").value("B");
+    
+    Mo("#select").value("B");
+    
+    Mo("#multiple").value(["B","C"]);
+    
+    Mo("#textarea").value("textarea");
+    
+    Mo("input.radio").value("B");
+    
+    Mo("input.checkbox").value("B");
+    
+    
+    //alert(Mo("#multiple").value());
+    
+    
+    
+    //alert(Mo("#value").style("color"));
+    
+    /************* 显示/隐藏对象 测试 ****************/		
+
+    Mo("#hide").bind('click',function(){
+        Mo("#content").hide();
+    });
+    
+    Mo("#show").bind('click',function(){
+        Mo("#content").show( 10,function(){ Mo("#show").html('我是一个回调事件，你可以不理我！'); } ).html('我又出来了！');
+    });
+    
+    /************* 对象位置信息 测试 ****************/
+    
+    Mo("#pos").bind('click',function(){
+    
+        var pos = Mo("#pos").position();			
+        var str = '';
+        for(var x in pos){			
+            str +=  x + " : " + pos[x]  + "<br />";				
+        }
+        
+        Mo("#pos_box").html(str);
+    
+    });
+    
+    /************* Cookie 测试 ****************/
+
+    Mo("#cookie").bind('click',function(){
+        Mo.cookie("test","Hi！欢迎使用Mo。");
+        Mo("#cookie_box").html("我已经保存了！");
+    });
+
+    Mo("#cookie_read").bind('click',function(){
+        if( Mo.cookie("test") ){
+            Mo("#cookie_box").html( Mo.cookie("test") );
+        }else{
+            Mo("#cookie_box").html("没有内容！");
+        }
+    });
+
+    /************* URL参数 测试 ****************/
+
+    Mo("#url").bind('click',function(){
+        if( Mo.get("key") ){
+            Mo("#url_box").html( Mo.get("key") );
+        }else{
+            Mo("#url_box").html("参数为空或没有值！");
+        }
+    });
+    
+    /************* 禁用/启用对象 测试 ****************/
+
+    Mo("#disabled").bind('click',function(){
+        Mo("#display").disabled();
+    });
+
+
+    Mo("#enabled").bind('click',function(){
+        Mo("#display").enabled();
+    });
+
+    </script>
+    
+</body>
+</html>

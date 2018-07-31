@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Mo.js - 简洁高效，容易扩展 - JavaScript Library</title>
+<script src="lib/mo.js" type="text/javascript" charset="utf-8"></script>
+<script src="res/static.js" type="text/javascript" charset="utf-8"></script>
+<link href="res/layout.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <h1 id="mo-js"> Mo<span>.js</span> </h1>
+        <h4 id="build"> Mo.js - 高效 JavaScript 函数库 </h4>
+        
+        <div id="search">
+            <form action="search.html" method="get">
+                <input type="text" name="q" value="搜索..." />
+            </form>
+        </div>
+
+        <div id="naver">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browser.html">Browser</a></li>
+                <li><a href="selector.html">Selector</a></li>
+                <!--li><a href="ajax.html">Ajax</a></li-->
+                <!--li><a href="drag.html">Drag</a></li-->
+                <li><a href="event.html">Event</a></li>
+                <li><a href="date.html">Date</a></li>
+                <li><a href="string.html">String</a></li>
+                <!--li><a href="number.html">Number</a></li-->
+                <li><a href="array.html">Array</a></li>
+                <li><a href="cookie.html">Cookie</a></li>
+                <li><a href="validate.html">Validate</a></li>
+                <!--li><a href="hash.html">Hash</a></li-->
+                <li><a href="method.html">Method</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="api.html">API</a></li>
+            </ul>
+        </div>
+
+        <div id="desc">
+        
+            <p class="text">	
+                有了阳光和雨水，种子就能发芽。
+                <br />
+                特点：<strong>小巧、实用、优美、易扩展</strong>				
+            </p>
+            
+            <p class="down">            
+                <strong>25 K</strong> <br />
+                <a href="lib/mo.js"><img src="res/images/download.jpg" alt="下载压缩版" /></a>
+                <a href="src/mo.js">未压缩版(≈55 K)</a>            
+            </p>
+            
+        </div>
+
+        <dl id="entry">		
+
+            <dt> Mo.developer</dt>
+            <dd>
+
+                <ul id="developer">
+                    <li><a href="http://www.veryide.com/" target="_blank"><img src="res/developer/lay.png" /><br />Lay</a></li>
+                    <li><a href="http://www.wenotes.com/" target="_blank"><img src="res/developer/wiki.png" /><br />Wiki</a></li>
+                    <li><a href="mailto:verywork@gmail.com" target="_blank"><img src="res/developer/join.png" /><br />加入</a></li>
+                </ul>
+
+            </dd>
+
+            <dt> Mo.custom </dt>
+            <dd>
+                <p> 我们接受商业性的产品（组件）定制服务<br /> 基于 CSS / XML / AJAX / JavaScript 的项目都可以与我们联系。 </p>
+
+                <p>
+                    部分案例：
+                </p>
+                
+                <p>
+                    <a href="http://www.veryide.com/project.php" target="_blank">http://www.veryide.com/project.php</a>
+                </p>
+
+            </dd>			
+
+            <dt> Mo.contact </dt>
+            <dd>
+                <p>与我们联系。</p>
+                
+                <pre>群号：133567839</pre>
+            
+                <pre>邮箱：verywork#gmail.com</pre>
+            
+                <pre>微博：<a href="http://t.qq.com/header" target="_blank">http://t.qq.com/header</a></pre>
+            
+                <pre>SVN：<a href="http://mo-js.googlecode.com/svn/trunk/" target="_blank">http://mo-js.googlecode.com/svn/trunk/</a></pre>
+
+            </dd>			
+
+            <dt> Mo.version </dt>
+            <dd>
+                <p>当前 Mo 版本信息。</p>
+                
+                <pre>Mo.version</pre>
+
+                <p><script>Mo.write( Mo.version );</script></p>
+
+            </dd>			
+
+            <dt> Mo.build </dt>
+            <dd>
+
+                <p>当前 Mo 版本代号（最后更新日期）。</p>
+
+                <pre>Mo.build</pre>
+
+                <p><script>Mo.write( Mo.build );</script></p>
+
+            </dd>
+
+            <dt> Mo.store </dt>
+            <dd>
+
+                <p>全局变量存储空间。</p>
+
+                <pre>Mo.store</pre>
+
+                <p><script>Mo.write( Mo.store );</script></p>
+
+            </dd>
+            
+            <dt> Mo.base </dt>
+            <dd>
+
+                <p> Mo.js 基准目录地址，根据实际情况，其值为相对或绝对地址。</p>
+
+                <pre>Mo.base</pre>
+
+                <p><script>Mo.write( Mo.base );</script></p>
+
+            </dd>
+
+            <dt> Mo.plugin </dt>
+            <dd>
+
+                <p>全局插件存储空间。</p>
+
+                <pre>Mo.plugin</pre>
+
+                <p><script>Mo.write( Mo.plugin );</script></p>
+
+            </dd>
+
+            <dt> Mo.document </dt>
+            <dd>
+
+                <p>当前页面文档根元素。</p>
+
+                <pre>Mo.document</pre>
+
+                <p><script>Mo.write( Mo.document );</script></p>
+
+            </dd>
+
+            <dt> Mo.history </dt>
+            <dd>
+
+                <p>Mo.js 更新历史：</p>
+                
+                <p> - <strong>2011/02/08</strong> <em>Version 0.3</em> </p>
+
+                <ul>
+                    <li>增加 Mo.Event 事件处理函数</li>
+                    <li>增加了 Android 移动设备嗅探</li>
+                </ul>
+
+                <p> - <strong>2011/02/21</strong> <em>Version 0.4</em> </p>
+
+                <ul>
+                    <li>从主框架分离出了 mo.hash.js , mo.drag.js , mo.xml.js </li>
+                    <li>增加 Mo.create 元素创建方法</li>
+                    <li>选择器 .choice 方法增加倒序获取元素方式</li>
+                </ul>
+                
+                <p> - <strong>2011/03/06</strong> <em>Version 0.5</em> </p>
+
+                <ul>
+                    <li>增加了 Mo.Function , Mo.Date 内置对象扩展方法 </li>
+                    <li>修正了选择器（Selector）中几个方法的参数顺序 </li>
+                    <li>选择器（Selector）增加了 input[name=password] 和 input[name='config[theme]'] 方式来获取元素 </li>
+                    <li>选择器（Selector）删除了 .verify() 方法，推荐使用 .size() 来验证元素数量 </li>
+                    <li>选择器（Selector）增加了 .checked() 方法，用于控制 checkbox 选中状态 </li>
+                    <li>Mo.ready() 和 Mo.reader() 方法为回调函数增加耗时参数：time </li>
+                </ul>
+                
+                <p> - <strong>2011/03/22</strong> <em>Version 0.6</em> </p>
+
+                <ul>
+                    <li>选择器（Selector）增加了 .submit() 和 .reset() 方法，用于处理表单提交和重置操作 </li>
+                    <li>事件捕获（Event）增加了 .keyboard() 方法，用于处理键盘事件 </li>
+                </ul>
+                
+                <p> - <strong>2011/05/18</strong> <em>Version 0.7</em> </p>
+
+                <ul>
+                    <li>更新 Mo.Validate.Date 增加对字符串形式的支持</li>
+                    <li>修正 Mo.Dialog 在 IE 兼容模式下操作按钮错位的问题</li>
+                    <li>修正 Mo.Form 两处表单项验证失效的问题</li>
+                    <li>增加 Mo.Color.rand 随机颜色值生成方法 </li>
+                    <li>增加 Mo.json 方法，用于获取 JSON 数据</li>
+                    <li>增加 Mo.Flash 函数，用于创建 Flash 对象</li>
+                </ul>
+                
+                <p> - <strong>2011/07/07</strong> <em>Version 0.8</em> </p>
+
+                <ul>
+                    <li>修正 Mo.find 选择器在 IE7 以下不能处理 * 通配符的问题</li>
+                    <li>选择器（Selector）增加 .click 方法模拟鼠标点击</li>
+                    <li>选择器（Selector） .each 方法增加有条件终止支持</li>
+                    <li>选择器（Selector） .text 方法来操作 select 文本</li>
+                    <li>选择器（Selector） .value 方法针对 checkbox 和 radio 支持数组赋值</li>
+                </ul>
+                
+                <p> - <strong>2011/08/22</strong> <em>Version 0.9</em> </p>
+
+                <ul>
+                    <li>修正 Mo("#E").toggle() 可见状态判断有时无效的问题</li>
+                    <li>修正 Mo.json 不能多项加载的问题，原因是失误的使用了全局变量</li>
+                    <li>修正 Mo.Form 验证无名（name）select 元素失效的问题</li>
+                    <li>修正 IE8 滤镜在遮罩层高度超过一定尺寸时无效的问题，详见：<a href="http://www.ismgr.cn/blog/?p=490" target="_blank">这里</a></li>
+                    <li>更新 Mo.Form 验证元素时忽略已禁用对象</li>
+                    <li>更新 Mo.date 和 Mo.Date 增加对时间戳的支持</li>
+                </ul>
+                
+                <p> - <strong>2012/03/16</strong> <em>Version 1.0</em> </p>
+
+                <ul>
+                    <li>选择器（Selector）增加 .parent 方法用于访问父元素</li>
+                </ul>
+                
+                <p> - <strong>2012/06/21</strong> <em>Version 1.1</em> </p>
+
+                <ul>
+                    <li>数组（Array）增加 .min 和 .max 方法用于获取最小或最大的元素</li>
+                    <li>更新 选择器（Selector） .value 方法支持多个元素值的返回（数组形式）</li>
+                    <li>更新 选择器（Selector） .create 和 .insert 的 self 参数作用：<em>[可选]是否将当前元素置为所选元素，默认为 false</em></li>
+                    <li>更新 选择器（Selector）对低版本浏览器对自定义属性筛选的支持【重要】</em></li>
+                    <li>更新 Mo.create 方法支持自定义属性赋值【兼容】</li>
+                    <li>修正 Mo.Color 组件在子容器有滚动条时出现定位误差的问题，改用获取元素视口位置</li>
+                    <li>增加 Mo.Toolkit 实用工具包，感谢 <a href="http://bluescript.iteye.com/" target="_blank">BlueScript</a> 提供源码及帮助</li>
+                    <li>增加 Mo.$() 用于直接获取 ID 对象元素，简化获取方式</li>
+                    <li>增加 Mo.Template() 微型 JavaScript 模板引擎，它拥有缓存机制、支持使用原生的 JS 语法进行逻辑判断</li>
+                </ul>
+                
+                <p> - <strong>2013/10/12</strong> <em>Version 1.2</em> </p>
+
+                <ul>
+                    <li>选择器（Selector）增加 .prev 方法用于访问上一个兄弟元素</li>
+                    <li>选择器（Selector）增加 .next 方法用于访问下一个兄弟元素</li>
+                    <li>选择器（Selector）优化 .each 方法对元素的获取，简化参数传递</li>
+                    <li>修正 Element.swapNode 方法在非 IE 浏览器中的兼容性</li>
+                </ul>
+                                    
+            </dd>
+
+        </dl>
+    
+    </div>
+    
+    <div id="footer">
+    
+        Copyright &copy; 2011 <a href="http://www.veryide.com">VeryIDE</a> <span>|</span><a href="http://www.veryide.com/projects/">Projects</a> <span>|</span> <a href="http://www.veryide.com/projects/mojs/">Mo.js</a> <span>|</span> <a href="packer.html">Packer</a> <span>|</span> <a href="regex.html">Regex</a>
+    
+    </div>
+            
+    <p style="display:none;">
+        <script language="javascript" type="text/javascript" src="http://js.users.51.la/960393.js"></script>
+    </p>
+            
+</body>
+</html>
